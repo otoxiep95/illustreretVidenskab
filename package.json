@@ -1,0 +1,26 @@
+{
+  "name": "illustreret_videnskab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mysass": "node-sass file.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otoxiep95/illustreretVidenskab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otoxiep95/illustreretVidenskab/issues"
+  },
+  "homepage": "https://github.com/otoxiep95/illustreretVidenskab#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.4"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8"
+  }
+}
