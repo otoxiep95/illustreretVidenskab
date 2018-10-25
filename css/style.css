@@ -145,15 +145,21 @@ header {
   background-color: rgba(255, 255, 255, 0.7); }
 
 .hidden {
+  -webkit-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
   transform: translateX(-100vw); }
 
 .fadeOut {
   opacity: 0; }
 
 .rotateUp {
+  -webkit-transform: rotate(-45deg) translate(18px, 41px);
+  -ms-transform: rotate(-45deg) translate(18px, 41px);
   transform: rotate(-45deg) translate(18px, 41px); }
 
 .rotateDown {
+  -webkit-transform: rotate(45deg) translate(17px, -14px);
+  -ms-transform: rotate(45deg) translate(17px, -14px);
   transform: rotate(45deg) translate(17px, -14px); }
 
 * {
@@ -192,7 +198,6 @@ h3,
 h1,
 h3,
 .button {
-  margin: 0;
   text-align: center; }
 
 .smallText {
@@ -202,7 +207,6 @@ h3,
   text-align: left;
   color: #1b1464; }
 
-/**Header**/
 /****************STEP ONE******************/
 .stepOne {
   position: relative;

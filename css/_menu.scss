@@ -1,3 +1,8 @@
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
 header {
   border: 3pt solid $blueColor;
   background-image: url("/img/menu_background.jpg");
@@ -31,7 +36,7 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 .hidden {
-  transform: translateX(-100vw);
+  @include transform(translateX(-100vw));
 }
 
 .fadeOut {
@@ -39,9 +44,9 @@ header {
 }
 
 .rotateUp {
-  transform: rotate(-45deg) translate(18px, 41px);
+  @include transform(rotate(-45deg) translate(18px, 41px));
 }
 
 .rotateDown {
-  transform: rotate(45deg) translate(17px, -14px);
+  @include transform(rotate(45deg) translate(17px, -14px));
 }
