@@ -22,7 +22,7 @@ slider.init = function(selector) {
   slider.slideCount = slider.sliderEl.querySelectorAll(slider.sliderPanelSelector).length;
 
   // 4c. Populate pagination
-  var n = 0;
+  let n = 0;
   for (n; n < slider.slideCount; n++) {
     var activeStatus = n == slider.activeSlide ? ' class="is-active"' : '';
     slider.sliderEl.parentElement.querySelector(slider.sliderPaginationSelector).innerHTML += '<div ' + activeStatus + '></div>';
