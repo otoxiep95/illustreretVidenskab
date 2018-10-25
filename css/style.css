@@ -119,6 +119,43 @@ a {
 .slider-panel img {
   width: 100%; }
 
+header {
+  border: 3pt solid #1b1464;
+  background-image: url("/img/menu_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  header svg {
+    margin: 5% 5% 0 5%;
+    fill: white;
+    height: 50px;
+    width: 40px; }
+    header svg rect {
+      height: 5px;
+      transition: all 0.6s; }
+    header svg rect:nth-child(1) {
+      transform-origin: left top; }
+    header svg rect:nth-child(3) {
+      transform-origin: left bottom; }
+  header .navLogo {
+    width: 40%;
+    margin: 5% 5% 3% 9%; }
+
+.menu {
+  transition: all 0.6s;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.hidden {
+  transform: translateX(-100vw); }
+
+.fadeOut {
+  opacity: 0; }
+
+.rotateUp {
+  transform: rotate(-45deg) translate(18px, 41px); }
+
+.rotateDown {
+  transform: rotate(45deg) translate(17px, -14px); }
+
 * {
   box-sizing: border-box; }
 
@@ -149,12 +186,12 @@ h2 {
 h1,
 h2,
 h3,
-.subscribe {
+.button {
   text-transform: uppercase; }
 
 h1,
 h3,
-.subscribe {
+.button {
   margin: 0;
   text-align: center; }
 
@@ -166,22 +203,6 @@ h3,
   color: #1b1464; }
 
 /**Header**/
-header {
-  border: 3pt solid #1b1464;
-  background-image: url("/img/menu_background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
-  header svg {
-    margin: 5% 5% 0 5%;
-    fill: white;
-    height: 50px;
-    width: 40px; }
-    header svg rect {
-      height: 5px; }
-  header img {
-    width: 45%;
-    margin: 0 5% 2% 8%; }
-
 /****************STEP ONE******************/
 .stepOne {
   position: relative;
@@ -193,7 +214,7 @@ header {
     grid-column: 1; }
 
 .smallText,
-.subscribe {
+.button {
   margin: 5% 0;
   grid-column: span 2; }
 
@@ -221,10 +242,7 @@ label {
     border-color: #1b1464;
     color: #1b1464; }
 
-.subscribe {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+.button {
   background-color: #85ce6e;
   color: white;
   font-size: 16pt;
@@ -232,6 +250,11 @@ label {
   text-transform: uppercase;
   height: 6vh;
   padding: 2%; }
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; }
 
 /****************STEP TWO******************/
 .stepTwo > .stepTwoGrid {
