@@ -1,113 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700");
 /**Variables**/
-* {
-  box-sizing: border-box; }
-
-body {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto";
-  color: #1b1464; }
-
-main {
-  margin: 5%; }
-
-h1 {
-  font-weight: 700;
-  font-size: 18pt; }
-
-p {
-  font-size: 16pt; }
-
-h3 {
-  font-size: 14pt; }
-
-h2 {
-  font-weight: 700;
-  font-size: 14pt; }
-
-h1,
-h2,
-h3,
-.subscribe {
-  text-transform: uppercase; }
-
-h1,
-h3,
-.subscribe {
-  margin: 0;
-  text-align: center; }
-
-/**Header**/
-header {
-  border: 3pt solid #1b1464;
-  background-color: #1b1464; }
-  header svg {
-    margin: 5% 5% 0 5%;
-    fill: white;
-    height: 50px;
-    width: 40px; }
-    header svg rect {
-      height: 5px; }
-
-/****************STEP ONE******************/
-.stepOne {
-  position: relative;
-  margin: 10% 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr 0.5fr 0.5fr; }
-  .stepOne label {
-    grid-column: 1; }
-
-.smallText,
-.subscribe {
-  margin: 5% 0;
-  grid-column: span 2; }
-
-.smallText {
-  font-weight: 100;
-  font-style: italic;
-  font-size: 12pt;
-  text-align: left; }
-
-.plus {
-  margin: auto;
-  color: white;
-  background-color: #1b1464;
-  border-radius: 50%;
-  padding: 0 1pt;
-  font-size: 14pt;
-  height: 16pt;
-  width: 16pt; }
-
-.strikeThrough {
-  margin: 0;
-  text-align: center;
-  font-weight: 100;
-  font-size: 12pt;
-  text-decoration-line: line-through; }
-
-label {
-  font-size: 16pt;
-  font-weight: 700; }
-  label input[type="radio"] {
-    border-color: #1b1464;
-    color: #1b1464; }
-
-.subscribe {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -1px;
-  background-color: #85ce6e;
-  color: white;
-  font-size: 16pt;
-  font-weight: 700;
-  text-transform: uppercase;
-  height: 6vh;
-  padding: 2%; }
-
 /*****radiobutton from W3 schools******/
 /* The container */
 .container {
@@ -147,10 +39,10 @@ label {
   position: absolute;
   content: "";
   border-radius: 100%;
-  height: 15px;
-  width: 15px;
-  top: 2.5px;
-  left: 2.5px;
+  height: 12.5px;
+  width: 12.5px;
+  top: 3.5px;
+  left: 4px;
   margin: auto; }
 
 /* When the radio button is checked, add a blue background */
@@ -174,6 +66,111 @@ label {
   width: 8px;
   height: 8px;
   border-radius: 50%; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  color: #1b1464; }
+
+main {
+  margin: 5%; }
+
+h1 {
+  font-weight: 700;
+  font-size: 18pt; }
+
+p {
+  font-size: 16pt; }
+
+h3 {
+  font-size: 14pt; }
+
+h2 {
+  font-weight: 700;
+  font-size: 14pt; }
+
+h1,
+h2,
+h3,
+.subscribe {
+  text-transform: uppercase; }
+
+h1,
+h3,
+.subscribe {
+  margin: 0;
+  text-align: center; }
+
+.smallText {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 12pt;
+  text-align: left; }
+
+/**Header**/
+header {
+  border: 3pt solid #1b1464;
+  background-color: #1b1464; }
+  header svg {
+    margin: 5% 5% 0 5%;
+    fill: white;
+    height: 50px;
+    width: 40px; }
+    header svg rect {
+      height: 5px; }
+
+/****************STEP ONE******************/
+.stepOne {
+  position: relative;
+  margin: 10% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr 0.5fr 0.5fr; }
+  .stepOne label {
+    grid-column: 1; }
+
+.smallText,
+.subscribe {
+  margin: 5% 0;
+  grid-column: span 2; }
+
+.plus {
+  margin: auto;
+  color: white;
+  background-color: #1b1464;
+  border-radius: 50%;
+  padding: 0 1pt;
+  font-size: 14pt;
+  height: 16pt;
+  width: 16pt; }
+
+.strikeThrough {
+  margin: 0;
+  text-align: center;
+  font-weight: 100;
+  font-size: 12pt;
+  text-decoration-line: line-through; }
+
+label {
+  font-size: 16pt;
+  font-weight: 700; }
+  label input[type="radio"] {
+    border-color: #1b1464;
+    color: #1b1464; }
+
+.subscribe {
+  background-color: #85ce6e;
+  color: white;
+  font-size: 16pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 6vh;
+  padding: 2%; }
 
 /****************STEP TWO******************/
 .stepTwo > .stepTwoGrid {
