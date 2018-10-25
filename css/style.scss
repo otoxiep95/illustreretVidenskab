@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700");
-
+@import "radiobutton";
+/**Variables**/
 $blueColor: #1b1464;
 $greenColor: #85ce6e;
 $font: "Roboto";
+
 * {
   box-sizing: border-box;
 }
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: $font;
@@ -15,19 +18,7 @@ body {
 main {
   margin: 5%;
 }
-header {
-  border: 3pt solid $blueColor;
-  background-color: $blueColor;
-  svg {
-    margin: 5% 5% 0 5%;
-    fill: white;
-    height: 50px;
-    width: 40px;
-    rect {
-      height: 5px;
-    }
-  }
-}
+
 h1 {
   font-weight: 700;
   font-size: 18pt;
@@ -54,11 +45,26 @@ h3,
   margin: 0;
   text-align: center;
 }
-.checkoutTitle {
-  margin-bottom: 10%;
+
+/**Header**/
+header {
+  border: 3pt solid $blueColor;
+  background-color: $blueColor;
+  svg {
+    margin: 5% 5% 0 5%;
+    fill: white;
+    height: 50px;
+    width: 40px;
+    rect {
+      height: 5px;
+    }
+  }
 }
+
 /****************STEP ONE******************/
 .stepOne {
+  position: relative;
+  margin: 10% 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr 0.5fr 0.5fr;
@@ -68,7 +74,7 @@ h3,
 }
 .smallText,
 .subscribe {
-  margin: 3% 0;
+  margin: 5% 0;
   grid-column: span 2;
 }
 .smallText {
@@ -77,6 +83,17 @@ h3,
   font-size: 12pt;
   text-align: left;
 }
+.plus {
+  margin: auto;
+  color: white;
+  background-color: $blueColor;
+  border-radius: 50%;
+  padding: 0 1pt;
+  font-size: 14pt;
+  height: 16pt;
+  width: 16pt;
+}
+
 .strikeThrough {
   margin: 0;
   text-align: center;
@@ -94,6 +111,9 @@ label {
 }
 
 .subscribe {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
   background-color: $greenColor;
   color: white;
   font-size: 16pt;
@@ -177,12 +197,27 @@ label {
 }
 /****************STEP TWO******************/
 .stepTwo > .stepTwoGrid {
-  margin: 5% 0;
+  margin: 10% 0;
   p,
   h3 {
-    // text-transform: uppercase;
     text-align: center;
-    margin: 5% 0;
+    margin: 0;
+  }
+  .shopIcon {
+    display: block;
+    margin: 10% auto;
+    font-size: 16pt;
+  }
+  .plusBlue {
+    font-size: 20pt;
+    font-weight: 100;
+  }
+  .desktopMobile {
+    text-align: center;
+    img {
+      display: inline-block;
+      margin: 5% 0;
+    }
   }
 }
 
@@ -194,13 +229,33 @@ label {
 }
 
 /*****************STEP THREE*********************/
-.stepThree > div {
+.titleGrid {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 0.1fr 1fr;
+}
+.stepThreeGrid {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  img {
+    margin: auto;
+    width: 70%;
+  }
+
   ul {
     grid-column: 2;
+    // padding-left: 8%;
     h2 {
       margin: 0;
     }
   }
+  .smallText {
+    grid-column: 2;
+  }
+}
+.borderLine {
+  width: 50vw;
+  height: 1vw;
+  display: block;
+  margin: 15% auto;
+  border-bottom: 3pt solid $blueColor;
 }
