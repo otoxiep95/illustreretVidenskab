@@ -94,3 +94,88 @@ input:focus + label {
   cursor: pointer; /* [2] */
   color: blue;
 }
+
+
+
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(8, [col]1fr);
+  grid-template-rows: repeat(2, 100px);
+  background-color: #1B1464;
+}
+
+.timeline_second {
+  display: grid;
+  grid-template-columns: repeat(8, [col]1fr);
+  grid-template-rows: repeat(2, 100px);
+}
+
+.num {
+  grid-column: col / span 1;
+  color: white;
+
+}
+
+.data {
+  grid-column: col 5 / span 2;
+}
+
+.data1 {
+  grid-column: col 4 / span 2;
+  grid-row: 2;
+}
+
+
+
+.color2 {
+  color: #1B1464;
+  grid-column: col / span 1;
+}
+
+p.num,
+p.color2,
+.data2,
+.data,
+.data1 {
+  padding: 1em;
+}
+
+.premier {
+  grid-column: col 2 / span 2;
+  padding-top: 1em;
+}
+
+.data,
+.data1 {
+  justify-self: self-end;
+}
+
+.data2 {
+  padding-left: 0;
+}
+
+.amount,
+.price {
+  color: white;
+  padding-top: 1em;
+}
+
+.premier1 {
+  grid-column: col 4 / span 2;
+  width: 25vw;
+  grid-row: 2;
+  padding-top: 1em;
+}
+
+.checkout {
+  grid-column: col 7 / span 2;
+  padding-top: 1em;
+}
+
+hr {
+  width: 70vw;
+  color: #1B1464;
+  font-weight: solid;
+  size: 3;
+}
