@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 /**
 * Make the field a flex-container, reverse the order so label is on top.
 */
@@ -5,17 +12,21 @@ form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .field {
   display: flex;
   flex-flow: column-reverse;
   grid-column: 1/-1;
 }
+
 .field:nth-child(4) {
   grid-column: 1/2;
 }
+
 .field:nth-child(5) {
   grid-column: 2/-1;
 }
+
 /**
 * Add a transition to the label and input.
 */
@@ -30,6 +41,7 @@ input {
   border: 0;
   border-bottom: 1px solid #ccc;
 }
+
 /**
 * Change input border on focus.
 */
@@ -38,7 +50,7 @@ input:focus {
   border-bottom: 1px solid blue;
 }
 
-input:valid ~ .validated::after {
+input:valid~.validated::after {
   position: absolute;
   float: left;
   width: 20px;
@@ -49,6 +61,7 @@ input:valid ~ .validated::after {
   text-align: center;
   content: "✓";
 }
+
 /**
 * When the label follows an input matching :placeholder-shown...
 * 1. Make sure the label is only on one row, at max 2/3rds of the
@@ -56,7 +69,7 @@ input:valid ~ .validated::after {
 * 2. Fix the cursor.
 * 3. Translate down and scale the label up to cover the placeholder.
 */
-input:placeholder-shown + label {
+input:placeholder-shown+label {
   /* [1] */
   max-width: 66.66%;
   white-space: nowrap;
@@ -68,6 +81,7 @@ input:placeholder-shown + label {
   transform-origin: left bottom;
   transform: translate(0, 2.125rem) scale(1.5);
 }
+
 /**
 * By default, the placeholder should be transparent. Also, it should 
 * inherit the transition.
@@ -76,22 +90,26 @@ input:placeholder-shown + label {
   transition: inherit;
   opacity: 0;
 }
+
 /**
 * Show the placeholder when the input is focused.
 */
 input:focus::-webkit-input-placeholder {
   opacity: 1;
 }
+
 /**
 * 1. When the element is focused, remove the label transform.
 *     Also, do this when the placeholder is _not_ shown, i.e. when 
 *     there's something in the input at all.
 * 2. ...and set the cursor to pointer.
 */
-input:not(:placeholder-shown) + label,
-input:focus + label {
-  transform: translate(0, 0) scale(1); /* [1] */
-  cursor: pointer; /* [2] */
+input:not(:placeholder-shown)+label,
+input:focus+label {
+  transform: translate(0, 0) scale(1);
+  /* [1] */
+  cursor: pointer;
+  /* [2] */
   color: blue;
 }
 
@@ -103,7 +121,11 @@ input:focus + label {
   grid-template-columns: repeat(8, [col]1fr);
   grid-template-rows: repeat(2, 100px);
   background-color: #1B1464;
+  margin: 1em;
+
 }
+
+
 
 .timeline_second {
   display: grid;
@@ -126,7 +148,18 @@ input:focus + label {
   grid-row: 2;
 }
 
+p.data1,
+p.data {
+  color: #1B1464;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
 
+.timeline p,
+.timeline2 p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
 
 .color2 {
   color: #1B1464;
@@ -139,6 +172,7 @@ p.color2,
 .data,
 .data1 {
   padding: 1em;
+  font-family: 'Roboto', sans-serif;
 }
 
 .premier {
