@@ -18,6 +18,7 @@ body {
 header {
   position: sticky;
   width: 100%;
+  height: 15vh;
   border: 3pt solid #1b1464;
   background-color: #1b1464;
   color: white;
@@ -29,12 +30,37 @@ header {
   }
   .selection-title {
     width: 75%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    position: relative;
+
     h3 {
+      width: fit-content;
+      height: fit-content;
+      font-size: 12px;
       font-weight: 400;
+      position: absolute;
+      margin: 0;
+      // margin: auto 0 25px 7.5%;
+      bottom: 15px;
+      left: 7.5%;
+
       span:not(.line-through) {
         font-weight: 700;
+        font-size: 16px;
+      }
+      .line-through {
+        font-size: 12px;
+        font-weight: 300;
+        text-decoration: line-through;
+      }
+      &:nth-child(2) {
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+
+        left: 180px;
+        font-weight: 700;
+        font-size: 16px;
       }
     }
   }
@@ -57,11 +83,12 @@ form {
   grid-gap: 1vw;
   grid-row-gap: 3vh;
   background: white;
+  color: $blueColor;
   h2 {
     grid-column: 1/-1;
   }
   p {
-    font-size: 14pt;
+    font-size: 14px;
     grid-column: 1/-1;
   }
 }
@@ -94,8 +121,7 @@ label {
 input {
   font-size: 16pt;
   border: 0;
-
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid $blueColor;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -107,7 +133,7 @@ input[type="number"]::-webkit-outer-spin-button {
 */
 input:focus {
   outline: 0;
-  border-bottom: 1px solid $blueColor;
+  border-bottom: 2px solid $blueColor;
 }
 /* CHECK MARK WHEN CORRECT*/
 /* input:valid ~ .validated::after {
@@ -190,15 +216,29 @@ input:focus::-webkit-input-placeholder {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 
-  p {
+  p,
+  div {
     margin: 0;
     font-size: 14pt;
+    border-bottom: $blueColor solid 2px;
   }
 }
 
 .terms {
   width: 100%;
   padding: 0 5%;
+  margin-top: 15%;
+  .terms-box {
+    padding: 0;
+  }
+  li {
+    font-size: 14px;
+  }
+  label {
+    span {
+      font-weight: 700;
+    }
+  }
 }
 
 .container-pay {
@@ -284,6 +324,10 @@ input:focus::-webkit-input-placeholder {
   height: 7%;
   div {
     text-align: center;
+    h3 {
+      padding-top: 5%;
+      margin: 0;
+    }
   }
 }
 

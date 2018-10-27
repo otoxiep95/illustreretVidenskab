@@ -13,6 +13,7 @@ body {
 header {
   position: sticky;
   width: 100%;
+  height: 15vh;
   border: 3pt solid #1b1464;
   background-color: #1b1464;
   color: white; }
@@ -23,12 +24,31 @@ header {
     width: 25%; }
   header .selection-title {
     width: 75%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
+    height: 100%;
+    position: relative; }
     header .selection-title h3 {
-      font-weight: 400; }
+      width: fit-content;
+      height: fit-content;
+      font-size: 12px;
+      font-weight: 400;
+      position: absolute;
+      margin: 0;
+      bottom: 15px;
+      left: 7.5%; }
       header .selection-title h3 span:not(.line-through) {
-        font-weight: 700; }
+        font-weight: 700;
+        font-size: 16px; }
+      header .selection-title h3 .line-through {
+        font-size: 12px;
+        font-weight: 300;
+        text-decoration: line-through; }
+      header .selection-title h3:nth-child(2) {
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        left: 180px;
+        font-weight: 700;
+        font-size: 16px; }
 
 /**
 * Make the field a flex-container, reverse the order so label is on top.
@@ -46,11 +66,12 @@ form {
   grid-template-columns: repeat(4, 20vw);
   grid-gap: 1vw;
   grid-row-gap: 3vh;
-  background: white; }
+  background: white;
+  color: #1b1464; }
   .personal-info h2 {
     grid-column: 1/-1; }
   .personal-info p {
-    font-size: 14pt;
+    font-size: 14px;
     grid-column: 1/-1; }
 
 .field {
@@ -81,7 +102,7 @@ label {
 input {
   font-size: 16pt;
   border: 0;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 2px solid #1b1464; }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -93,7 +114,7 @@ input[type="number"]::-webkit-outer-spin-button {
 */
 input:focus {
   outline: 0;
-  border-bottom: 1px solid #1b1464; }
+  border-bottom: 2px solid #1b1464; }
 
 /* CHECK MARK WHEN CORRECT*/
 /* input:valid ~ .validated::after {
@@ -172,13 +193,22 @@ input:focus::-webkit-input-placeholder {
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr; }
-  .payment-option p {
+  .payment-option p,
+  .payment-option div {
     margin: 0;
-    font-size: 14pt; }
+    font-size: 14pt;
+    border-bottom: #1b1464 solid 2px; }
 
 .terms {
   width: 100%;
-  padding: 0 5%; }
+  padding: 0 5%;
+  margin-top: 15%; }
+  .terms .terms-box {
+    padding: 0; }
+  .terms li {
+    font-size: 14px; }
+  .terms label span {
+    font-weight: 700; }
 
 .container-pay {
   display: block;
@@ -256,6 +286,9 @@ input:focus::-webkit-input-placeholder {
   height: 7%; }
   .progress-bar div {
     text-align: center; }
+    .progress-bar div h3 {
+      padding-top: 5%;
+      margin: 0; }
 
 input[type="submit"] {
   width: 95%;
