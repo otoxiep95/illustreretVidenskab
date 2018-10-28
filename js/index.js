@@ -26,3 +26,21 @@ function GoBack() {
 backArrow.addEventListener("click", function() {
   GoBack();
 })
+
+const body = document.querySelector("body");
+
+let form = document.querySelector("#dataForm");
+
+function checkForm() {
+  console.log("checkForm called");
+  let validity = form.checkValidity();
+  console.log("Validity", validity);
+
+  if (validity) {
+    body.style.backgroundColor = "lightgreen";
+    // paymentButton.disabled = false;
+  } else {
+    body.style.backgroundColor = "lightblue";
+    // paymentButton.disabled = true;
+  }
+}
