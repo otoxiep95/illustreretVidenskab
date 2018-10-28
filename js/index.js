@@ -16,3 +16,13 @@ paymentButton.addEventListener("click", function() {
   infosButton.classList.remove("selected");
   paymentButton.classList.add("selected");
 });
+
+const backArrow = document.querySelector(".arrow");
+
+function GoBack() {
+  window.history.back();
+}
+
+backArrow.addEventListener("click", function() {
+  GoBack();
+})

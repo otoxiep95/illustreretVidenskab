@@ -17,8 +17,13 @@
 <body>
   <header>
     <div class="selection-title">
-      <h3>YOU SELECTED <span>2 nr.</span><br>
-                WITH <span>BINOCULAR </span>FOR</h3>
+
+      <h3>
+        <p class="arrow">
+          &#8592;</p>
+        Du har valgt <span>2 nr.</span><br>
+                OG <span>Mitilux kikkert </span>FOR
+      </h3>
       <h3><span class="line-through">1199kr.</span><br> *99kr.</h3>
     </div>
 
@@ -40,44 +45,45 @@
 
       <div class="field">
         <input type="text" name="firstname" id="firstname" placeholder="Albert" required>
-        <label for="firstname"> First Name <span>*</span></label>
-        <span class="validated"></span>
+        <span class="validated"></span> <label for="firstname"> Fornavn <span>*</span></label>
+
       </div>
       <div class="field">
         <input type="text" name="lastname" id="lastname" placeholder="Einstein" required>
-        <label for="lastname">Last Name <span>*</span></label>
-        <span class="validated"></span>
+        <span class="validated"></span><label for="lastname">Efternavn <span>*</span></label>
+
       </div>
       <div class="field">
         <input type="text" name="adress" id="adress" placeholder="112 Mercer Street" required>
-        <label for="adress">Adress <span>*</span></label>
-        <span class="validated"></span>
+        <span class="validated"></span><label for="adress">Adresse <span>*</span></label>
+
+      </div>
+
+      <div class="field">
+        <input type="text" name="city" id="city" placeholder="Princeton" required>
+        <span class="validated"></span><label for="city">By <span>*</span></label>
+
       </div>
       <div class="field">
         <input type="number" name="postnr" id="postnr" placeholder="10461" required>
-        <label for="postnr">Postnr <span>*</span></label>
-        <span class="validated"></span>
-      </div>
-      <div class="field">
-        <input type="text" name="city" id="city" placeholder="Princeton" required>
-        <label for="city">City <span>*</span></label>
-        <span class="validated"></span>
+        <span class="validated"></span><label for="postnr">Postnr <span>*</span></label>
+
       </div>
       <div class="field">
         <input type="email" name="email" id="email" placeholder="man2Einstein@example.com" required>
-        <label for="email">Email <span>*</span></label>
-        <span class="validated"></span>
+        <span class="validated"></span><label for="email">E-mail <span>*</span></label>
+
       </div>
       <div class="field">
         <input type="email" name="confirmemail" id="confirmemail" placeholder="man2Einstein@example.com"
                     required>
-        <label for="confirmemail">Confirm Email <span>*</span></label>
-        <span class="validated"></span>
+        <span class="validated"></span><label for="confirmemail">Bekræft e-mail<span>*</span></label>
+
       </div>
 
       <div class="field">
         <input type="number" name="phonenr" id="phonenr" placeholder="56070707">
-        <label for="phonenr">Telephone number</label>
+        <label for="phonenr">Telefonnr.</label>
         <!-- <span class="validated"></span> -->
       </div>
       <p>Felter markeret med * er obligatoriske</p>
@@ -90,7 +96,7 @@
         <div class="payment-option">
           <p>Visa / Dankort</p>
           <div></div>
-          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+          <label class="container-pay"><input id="visa" type="radio" name="visa">
             <span class="checkmark"></span>
           </label>
 
@@ -100,9 +106,9 @@
 
 
         <div class="payment-option">
-          <p>Credit cards</p>
+          <p>Kreditkort</p>
           <div></div>
-          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+          <label class="container-pay"><input id="credit" type="radio" name="credit">
             <span class="checkmark"></span>
           </label>
 
@@ -110,7 +116,7 @@
         <div class="payment-option">
           <p>Mobilepay</p>
           <div></div>
-          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+          <label class="container-pay"><input id="mobilepay" type="radio" name="mobilepay">
             <span class="checkmark"></span>
           </label>
 
@@ -118,7 +124,7 @@
         <div class="payment-option">
           <p>Girokort (+10kr)</p>
           <div></div>
-          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+          <label class="container-pay"><input id="girokort" type="radio" name="girokort">
             <span class="checkmark"></span>
           </label>
 
@@ -127,13 +133,13 @@
       </div>
       <div class="terms">
         <ul class="terms-box">
-          <li>After the offer, you continue on a regular subscription and can terminate it at any time.</li>
-          <li>The subscription is paid for 4 numbers at a time, totaling 315.80 kr. (78,95 kr. Per number)</li>
+          <li>Efter tilbuddet fortsætter du i løbende abonnement og kan til enhver tid opsige det.</li>
+          <li>Abonnementet betales for 4 numre ad gangen, i alt 315,80 kr.. (78,95 kr. pr. nummer)</li>
         </ul>
         <div>
           <input type="checkbox" id="terms-condition" name="terms-condition" value="terms-check" />
           <label class="terms-lable"
-            for="scales">I have read and accepted the subscription <span>terms</span></label>
+            for="scales">Jeg har læst og accepteret <span>abonnementsbetingelserne</span></label>
         </div>
 
       </div>
@@ -141,10 +147,10 @@
 
     <div class="progress-bar">
       <div class="infos-nav selected">
-        <h3>Informations</h3>
+        <h3>Kundeoplysninger</h3>
       </div>
       <div class="payment-nav">
-        <h3>Payment</h3>
+        <h3>Betalingsmetode</h3>
       </div>
       <input class="hidden" type="submit" value="GO TO SECURE PAYMENT">
         </div>

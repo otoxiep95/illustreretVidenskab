@@ -120,15 +120,17 @@ form {
 label,
 input {
   transition: all 0.2s;
+  margin: 0;
   /* padding-left: 30px; */
 }
 
 label {
-  font-size: 8pt;
+  font-size: 7pt;
 }
 
 input {
   font-size: 16pt;
+  padding-left: 25px;
   border: 0;
   border-bottom: 2px solid #1b1464;
 }
@@ -148,7 +150,7 @@ input:focus {
 }
 
 /* CHECK MARK WHEN CORRECT*/
-/* input:valid ~ .validated::after {
+input:valid~.validated::after {
   position: absolute;
   float: left;
   width: 20px;
@@ -158,7 +160,8 @@ input:focus {
   border-radius: 50%;
   text-align: center;
   content: "✓";
-} */
+}
+
 /**
 * When the label follows an input matching :placeholder-shown...
 * 1. Make sure the label is only on one row, at max 2/3rds of the
@@ -229,13 +232,13 @@ input:focus::-webkit-input-placeholder {
 .payment-option {
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
 }
 
 .payment-option p,
 .payment-option div {
   margin: 0;
-  font-size: 14pt;
+  font-size: 11pt;
   border-bottom: #1b1464 solid 2px;
 }
 
@@ -282,8 +285,8 @@ input:focus::-webkit-input-placeholder {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   border: 2pt solid #1b1464;
   border-radius: 50%;
 }
@@ -349,6 +352,7 @@ input:focus::-webkit-input-placeholder {
 .progress-bar div h3 {
   padding-top: 5%;
   margin: 0;
+  font-size: 1em;
 }
 
 input[type="submit"] {
@@ -366,4 +370,9 @@ input[type="submit"] {
 
 .selected {
   border-top: #1b1464 solid 4pt;
+}
+
+.arrow {
+  font-size: 30px;
+  margin: 0;
 }
