@@ -23,7 +23,7 @@
 /* Create a custom radio button */
 .checkmark {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   height: 25px;
   width: 25px;
@@ -141,8 +141,16 @@ header {
     margin: 5% 5% 3% 9%; }
 
 .menu {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
   transition: all 0.6s;
-  background-color: rgba(255, 255, 255, 0.7); }
+  background-color: rgba(255, 255, 255, 0.8); }
+  .menu ul {
+    list-style-type: none; }
+    .menu ul li {
+      line-height: 20pt;
+      font-size: 14pt; }
 
 .hidden {
   -webkit-transform: translateX(-100vw);
@@ -207,13 +215,24 @@ h3,
   text-align: left;
   color: #1b1464; }
 
+.noMargin {
+  margin: 0; }
+
+.fullWidth {
+  width: 100%; }
+
+.plus {
+  margin: auto 5%;
+  font-size: 14pt;
+  height: 16pt;
+  width: 16pt; }
+
 /****************STEP ONE******************/
 .stepOne {
   position: relative;
   margin: 10% 0 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr 0.5fr 0.5fr; }
+  grid-template-columns: 1fr 1fr; }
   .stepOne label {
     grid-column: 1; }
 
@@ -222,18 +241,14 @@ h3,
   margin: 5% 0;
   grid-column: span 2; }
 
-.plus {
-  margin: auto 5%;
-  color: white;
-  background-color: #1b1464;
-  border-radius: 50%;
-  padding: 0 1pt;
-  font-size: 14pt;
-  height: 16pt;
-  width: 16pt; }
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-self: center; }
+  .iconGrid .giftIcon {
+    padding: 5% 0; }
 
 .strikeThrough {
-  margin: 0;
   text-align: center;
   font-weight: 100;
   font-size: 12pt;
@@ -260,48 +275,22 @@ label {
   position: -webkit-sticky;
   top: 0; }
 
-/****************STEP TWO******************/
-.stepTwo > .stepTwoGrid {
+/*****************STEP TWO*********************/
+.stepTwo {
   margin: 10% 0; }
-  .stepTwo > .stepTwoGrid p,
-  .stepTwo > .stepTwoGrid h3 {
-    text-align: center;
-    margin: 0; }
-  .stepTwo > .stepTwoGrid .shopIcon {
-    display: block;
-    margin: 10% auto;
-    font-size: 16pt; }
-  .stepTwo > .stepTwoGrid .plusBlue {
-    font-size: 20pt;
-    font-weight: 100; }
-  .stepTwo > .stepTwoGrid .desktopMobile {
-    text-align: center; }
-    .stepTwo > .stepTwoGrid .desktopMobile img {
-      display: inline-block;
-      margin: 5% 0; }
 
-.subTitles {
-  display: inline; }
-
-.emphasis {
-  font-weight: 700; }
-
-/*****************STEP THREE*********************/
-.titleGrid {
+.stepTwoGrid {
   display: grid;
-  grid-template-columns: 0.1fr 1fr; }
-
-.stepThreeGrid {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr; }
-  .stepThreeGrid img {
+  grid-template-columns: 0.3fr 1fr;
+  margin: 10% 0; }
+  .stepTwoGrid .bino {
+    grid-column: 1/-1; }
+  .stepTwoGrid .icon {
     margin: auto;
     width: 70%; }
-  .stepThreeGrid ul {
+  .stepTwoGrid ul {
     grid-column: 2; }
-    .stepThreeGrid ul h2 {
-      margin: 0; }
-  .stepThreeGrid .smallText {
+  .stepTwoGrid .smallText {
     grid-column: 2; }
 
 .borderLine {
@@ -310,3 +299,22 @@ label {
   display: block;
   margin: 15% auto;
   border-bottom: 3pt solid #1b1464; }
+
+/****************STEP THREE******************/
+.stepThree > .stepThreeGrid {
+  margin: 10% 0; }
+  .stepThree > .stepThreeGrid .shopIcon {
+    display: block;
+    margin: 10% auto;
+    font-size: 16pt; }
+  .stepThree > .stepThreeGrid .desktopMobile {
+    margin: 10% 30%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    text-align: center; }
+
+.subTitles {
+  display: inline; }
+
+.emphasis {
+  font-weight: 700; }
