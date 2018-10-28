@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="selection-title">
+      <h3>YOU SELECTED <span>2 nr.</span><br>
+                WITH <span>BINOCULAR </span>FOR</h3>
+      <h3><span class="line-through">1199kr.</span><br> *99kr.</h3>
+    </div>
+
+
+    <img src="img/logo-28.svg" alt="Illustreret Videnskap Logo" class="logo">
+    <!-- </nav> -->
+  </header>
+
+  <div class="purchase-info">
+
+    <!-- INFORMATION ABOUT THE PURCHASE AND STEPS -->
+
+  </div>
+
+  <form action="">
+
+
+    <div class="personal-info">
+
+      <div class="field">
+        <input type="text" name="firstname" id="firstname" placeholder="Albert" required>
+        <label for="firstname"> First Name <span>*</span></label>
+        <span class="validated"></span>
+      </div>
+      <div class="field">
+        <input type="text" name="lastname" id="lastname" placeholder="Einstein" required>
+        <label for="lastname">Last Name <span>*</span></label>
+        <span class="validated"></span>
+      </div>
+      <div class="field">
+        <input type="text" name="adress" id="adress" placeholder="112 Mercer Street" required>
+        <label for="adress">Adress <span>*</span></label>
+        <span class="validated"></span>
+      </div>
+      <div class="field">
+        <input type="number" name="postnr" id="postnr" placeholder="10461" required>
+        <label for="postnr">Postnr <span>*</span></label>
+        <span class="validated"></span>
+      </div>
+      <div class="field">
+        <input type="text" name="city" id="city" placeholder="Princeton" required>
+        <label for="city">City <span>*</span></label>
+        <span class="validated"></span>
+      </div>
+      <div class="field">
+        <input type="email" name="email" id="email" placeholder="man2Einstein@example.com" required>
+        <label for="email">Email <span>*</span></label>
+        <span class="validated"></span>
+      </div>
+      <div class="field">
+        <input type="email" name="confirmemail" id="confirmemail" placeholder="man2Einstein@example.com"
+                    required>
+        <label for="confirmemail">Confirm Email <span>*</span></label>
+        <span class="validated"></span>
+      </div>
+
+      <div class="field">
+        <input type="number" name="phonenr" id="phonenr" placeholder="56070707">
+        <label for="phonenr">Telephone number</label>
+        <!-- <span class="validated"></span> -->
+      </div>
+      <p>Felter markeret med * er obligatoriske</p>
+    </div>
+
+    <div class="payment-slide hidden">
+
+      <div class="payment-options-box">
+
+        <div class="payment-option">
+          <p>Visa / Dankort</p>
+          <div></div>
+          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+            <span class="checkmark"></span>
+          </label>
+
+
+        </div>
+
+
+
+        <div class="payment-option">
+          <p>Credit cards</p>
+          <div></div>
+          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+        <div class="payment-option">
+          <p>Mobilepay</p>
+          <div></div>
+          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+        <div class="payment-option">
+          <p>Girokort (+10kr)</p>
+          <div></div>
+          <label class="container-pay"><input id="visa-dk" type="radio" name="visa-dk">
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+
+      </div>
+      <div class="terms">
+        <ul class="terms-box">
+          <li>After the offer, you continue on a regular subscription and can terminate it at any time.</li>
+          <li>The subscription is paid for 4 numbers at a time, totaling 315.80 kr. (78,95 kr. Per number)</li>
+        </ul>
+        <div>
+          <input type="checkbox" id="terms-condition" name="terms-condition" value="terms-check" />
+          <label class="terms-lable"
+            for="scales">I have read and accepted the subscription <span>terms</span></label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <div class="infos-nav selected">
+        <h3>Informations</h3>
+      </div>
+      <div class="payment-nav">
+        <h3>Payment</h3>
+      </div>
+      <input class="hidden" type="submit" value="GO TO SECURE PAYMENT">
+        </div>
+
+
+
+  </form>
+
+
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
