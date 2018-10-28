@@ -117,20 +117,63 @@ a {
   text-transform: uppercase; }
 
 .slider-panel img {
-  width: 100vw; }
+  width: 100%; }
+
+header {
+  border: 3pt solid #1b1464;
+  background-image: url("/img/menu_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  header svg {
+    margin: 5% 5% 0 5%;
+    fill: white;
+    height: 50px;
+    width: 40px; }
+    header svg rect {
+      height: 5px;
+      transition: all 0.6s; }
+    header svg rect:nth-child(1) {
+      transform-origin: left top; }
+    header svg rect:nth-child(3) {
+      transform-origin: left bottom; }
+  header .navLogo {
+    width: 40%;
+    margin: 5% 5% 3% 9%; }
+
+.menu {
+  transition: all 0.6s;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.hidden {
+  -webkit-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  transform: translateX(-100vw); }
+
+.fadeOut {
+  opacity: 0; }
+
+.rotateUp {
+  -webkit-transform: rotate(-45deg) translate(18px, 41px);
+  -ms-transform: rotate(-45deg) translate(18px, 41px);
+  transform: rotate(-45deg) translate(18px, 41px); }
+
+.rotateDown {
+  -webkit-transform: rotate(45deg) translate(17px, -14px);
+  -ms-transform: rotate(45deg) translate(17px, -14px);
+  transform: rotate(45deg) translate(17px, -14px); }
 
 * {
   box-sizing: border-box; }
 
 body {
   position: relative;
-  margin: 0;
+  margin: 5%;
   padding: 0;
   font-family: "Roboto";
   color: #1b1464; }
 
 main {
-  margin: 5%; }
+  margin: 5% 0; }
 
 h1 {
   font-weight: 700;
@@ -149,37 +192,25 @@ h2 {
 h1,
 h2,
 h3,
-.subscribe {
+.button {
   text-transform: uppercase; }
 
 h1,
 h3,
-.subscribe {
-  margin: 0;
+.button {
   text-align: center; }
 
 .smallText {
   font-weight: 100;
   font-style: italic;
   font-size: 12pt;
-  text-align: left; }
-
-/**Header**/
-header {
-  border: 3pt solid #1b1464;
-  background-color: #1b1464; }
-  header svg {
-    margin: 5% 5% 0 5%;
-    fill: white;
-    height: 50px;
-    width: 40px; }
-    header svg rect {
-      height: 5px; }
+  text-align: left;
+  color: #1b1464; }
 
 /****************STEP ONE******************/
 .stepOne {
   position: relative;
-  margin: 10% 0;
+  margin: 10% 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr 0.5fr 0.5fr; }
@@ -187,12 +218,12 @@ header {
     grid-column: 1; }
 
 .smallText,
-.subscribe {
+.button {
   margin: 5% 0;
   grid-column: span 2; }
 
 .plus {
-  margin: auto;
+  margin: auto 5%;
   color: white;
   background-color: #1b1464;
   border-radius: 50%;
@@ -215,7 +246,7 @@ label {
     border-color: #1b1464;
     color: #1b1464; }
 
-.subscribe {
+.button {
   background-color: #85ce6e;
   color: white;
   font-size: 16pt;
@@ -223,6 +254,11 @@ label {
   text-transform: uppercase;
   height: 6vh;
   padding: 2%; }
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; }
 
 /****************STEP TWO******************/
 .stepTwo > .stepTwoGrid {

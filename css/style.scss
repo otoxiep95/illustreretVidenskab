@@ -4,21 +4,24 @@
 $blueColor: #1b1464;
 $greenColor: #85ce6e;
 $font: "Roboto";
+
 @import "radiobutton";
 @import "slider";
+@import "menu";
 
 * {
   box-sizing: border-box;
 }
+
 body {
   position: relative;
-  margin: 0;
+  margin: 5%;
   padding: 0;
   font-family: $font;
   color: $blueColor;
 }
 main {
-  margin: 5%;
+  margin: 5% 0;
 }
 
 h1 {
@@ -38,13 +41,12 @@ h2 {
 h1,
 h2,
 h3,
-.subscribe {
+.button {
   text-transform: uppercase;
 }
 h1,
 h3,
-.subscribe {
-  margin: 0;
+.button {
   text-align: center;
 }
 .smallText {
@@ -52,27 +54,13 @@ h3,
   font-style: italic;
   font-size: 12pt;
   text-align: left;
-}
-
-/**Header**/
-header {
-  border: 3pt solid $blueColor;
-  background-color: $blueColor;
-  svg {
-    margin: 5% 5% 0 5%;
-    fill: white;
-    height: 50px;
-    width: 40px;
-    rect {
-      height: 5px;
-    }
-  }
+  color: $blueColor;
 }
 
 /****************STEP ONE******************/
 .stepOne {
   position: relative;
-  margin: 10% 0;
+  margin: 10% 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr 0.5fr 0.5fr;
@@ -81,13 +69,13 @@ header {
   }
 }
 .smallText,
-.subscribe {
+.button {
   margin: 5% 0;
   grid-column: span 2;
 }
 
 .plus {
-  margin: auto;
+  margin: auto 5%;
   color: white;
   background-color: $blueColor;
   border-radius: 50%;
@@ -113,7 +101,7 @@ label {
   }
 }
 
-.subscribe {
+.button {
   background-color: $greenColor;
   color: white;
   font-size: 16pt;
@@ -121,6 +109,12 @@ label {
   text-transform: uppercase;
   height: 6vh;
   padding: 2%;
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 /****************STEP TWO******************/
@@ -171,7 +165,6 @@ label {
 
   ul {
     grid-column: 2;
-    // padding-left: 8%;
     h2 {
       margin: 0;
     }
