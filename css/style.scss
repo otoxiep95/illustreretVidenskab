@@ -56,14 +56,24 @@ h3,
   text-align: left;
   color: $blueColor;
 }
-
+.noMargin {
+  margin: 0;
+}
+.fullWidth {
+  width: 100%;
+}
+.plus {
+  margin: auto 5%;
+  font-size: 14pt;
+  height: 16pt;
+  width: 16pt;
+}
 /****************STEP ONE******************/
 .stepOne {
   position: relative;
   margin: 10% 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr 0.5fr 0.5fr;
   label {
     grid-column: 1;
   }
@@ -73,20 +83,17 @@ h3,
   margin: 5% 0;
   grid-column: span 2;
 }
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-self: center;
 
-.plus {
-  margin: auto 5%;
-  color: white;
-  background-color: $blueColor;
-  border-radius: 50%;
-  padding: 0 1pt;
-  font-size: 14pt;
-  height: 16pt;
-  width: 16pt;
+  .giftIcon {
+    padding: 5% 0;
+  }
 }
 
 .strikeThrough {
-  margin: 0;
   text-align: center;
   font-weight: 100;
   font-size: 12pt;
@@ -116,58 +123,24 @@ label {
   position: -webkit-sticky;
   top: 0;
 }
-
-/****************STEP TWO******************/
-.stepTwo > .stepTwoGrid {
+/*****************STEP TWO*********************/
+.stepTwo {
   margin: 10% 0;
-  p,
-  h3 {
-    text-align: center;
-    margin: 0;
-  }
-  .shopIcon {
-    display: block;
-    margin: 10% auto;
-    font-size: 16pt;
-  }
-  .plusBlue {
-    font-size: 20pt;
-    font-weight: 100;
-  }
-  .desktopMobile {
-    text-align: center;
-    img {
-      display: inline-block;
-      margin: 5% 0;
-    }
-  }
 }
-
-.subTitles {
-  display: inline;
-}
-.emphasis {
-  font-weight: 700;
-}
-
-/*****************STEP THREE*********************/
-.titleGrid {
-  display: grid;
-  grid-template-columns: 0.1fr 1fr;
-}
-.stepThreeGrid {
+.stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-  img {
+  margin: 10% 0;
+  .bino {
+    grid-column: 1/-1;
+  }
+  .icon {
     margin: auto;
     width: 70%;
   }
 
   ul {
     grid-column: 2;
-    h2 {
-      margin: 0;
-    }
   }
   .smallText {
     grid-column: 2;
@@ -179,4 +152,27 @@ label {
   display: block;
   margin: 15% auto;
   border-bottom: 3pt solid $blueColor;
+}
+/****************STEP THREE******************/
+.stepThree > .stepThreeGrid {
+  margin: 10% 0;
+  .shopIcon {
+    display: block;
+    margin: 10% auto;
+    font-size: 16pt;
+  }
+
+  .desktopMobile {
+    margin: 10% 30%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    text-align: center;
+  }
+}
+
+.subTitles {
+  display: inline;
+}
+.emphasis {
+  font-weight: 700;
 }
