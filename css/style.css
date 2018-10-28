@@ -109,13 +109,6 @@ body {
   padding-top: 1em;
   text-align: center; }
 
-a {
-  color: white;
-  font-size: 14px;
-  letter-spacing: 0.125em;
-  text-decoration: none;
-  text-transform: uppercase; }
-
 .slider-panel img {
   width: 100%; }
 
@@ -175,13 +168,13 @@ header {
 
 body {
   position: relative;
-  margin: 5%;
+  margin: 0;
   padding: 0;
   font-family: "Roboto";
   color: #1b1464; }
 
 main {
-  margin: 5% 0; }
+  margin: 5%; }
 
 h1 {
   font-weight: 700;
@@ -318,3 +311,21 @@ label {
 
 .emphasis {
   font-weight: 700; }
+
+/***************FOOTER************************/
+footer {
+  background-color: lightgray;
+  padding: 5% 10%; }
+  footer h3 {
+    font-size: 14pt;
+    text-align: left; }
+  footer p {
+    font-size: 10pt; }
+  footer a {
+    display: block;
+    color: gray;
+    font-size: 10pt; }
+
+.kundeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
