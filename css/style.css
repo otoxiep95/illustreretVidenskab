@@ -225,6 +225,8 @@ h2 {
   margin: 5% 0;
   display: grid;
   grid-template-columns: 1fr 1fr; }
+  .checkoutTitle div {
+    margin: 5% 0; }
   .checkoutTitle h3 {
     align-self: end;
     text-transform: initial; }
@@ -355,3 +357,5 @@ footer {
 .kundeGrid {
   display: grid;
   grid-template-columns: 1fr 1fr; }
+  .kundeGrid p {
+    margin-top: 0; }
