@@ -40,46 +40,51 @@
     <div class="personal-info">
 
       <div class="field">
-        <input type="text" name="firstname" id="firstname" placeholder="Albert" required oninput="checkForm()">
-        <label for="firstname"> Fornavn <span>*</span></label> <span class="validated"></span>
+        <input type="text" name="firstname" id="firstname" placeholder="Albert" required oninput="checkForm()" onblur="checkValFirstName()">
+        <label for="firstname"> Fornavn <span>*</span></label> <span class="hidden validated"></span><span class="hidden wrong"></span>
 
       </div>
       <div class="field">
-        <input type="text" name="lastname" id="lastname" placeholder="Einstein" required oninput="checkForm()">
-        <label for="lastname">Efternavn <span>*</span></label> <span class="validated"></span>
+        <input type="text" name="lastname" id="lastname" placeholder="Einstein" required oninput="checkForm()" onblur="checkValLastName()">
+        <label for="
+          lastname">Efternavn <span>*</span></label> <span class="hidden validated"></span>
 
       </div>
       <div class="field">
-        <input type="tel" name="phonenr" id="phonenr" pattern=".{8,8}" placeholder="56070707" oninput="checkForm()">
-        <label for="phonenr">Telefonnr.</label>
-        <span class="validated hidden"></span>
+        <input type="tel" name="phonenr" id="phonenr" pattern=".{8,8}" placeholder="56070707" oninput="checkForm()"
+          onblur="checkValPhoneNr()">
+        <label for=" phonenr">Telefonnr.</label>
+        <span class="validated hidden"></span><span class="hidden wrong">!</span>
 
       </div>
       <div class="field">
-        <input type="text" name="adress" id="adress" placeholder="112 Mercer Street" required oninput="checkForm()">
-        <label for="adress">Adresse <span>*</span></label><span class="validated"></span>
+        <input type="text" name="adress" id="adress" placeholder="112 Mercer Street" required oninput="checkForm()"
+          onblur="checkValAdress()">
+        <label for="adress">Adresse <span>*</span></label><span class="hidden validated"></span>
 
       </div>
       <div class="field">
-        <input type="number" name="postnr" id="postnr" placeholder="10461" min="555" max="9999" required oninput="checkForm()">
-        <label for="postnr">Postnr <span>*</span></label><span class="validated"></span>
+        <input type="number" name="postnr" id="postnr" placeholder="10461" min="555" max="9999" required oninput="checkForm()"
+          onblur="checkValPostNr()">
+        <label for="postnr">Postnr <span>*</span></label><span class="hidden validated"></span><span class="hidden wrong">!</span>
 
       </div>
       <div class="field">
-        <input type="text" name="city" id="city" placeholder="Princeton" required oninput="checkForm()">
-        <label for="city">By <span>*</span></label><span class="validated"></span>
+        <input type="text" name="city" id="city" placeholder="Princeton" required oninput="checkForm()" onblur="checkValCity()">
+        <label for="city">By <span>*</span></label><span class="hidden validated"></span>
 
       </div>
 
       <div class="field">
-        <input type="email" name="email" id="email" placeholder="man2Einstein@example.com" required oninput="checkForm()">
-        <label for="email">E-mail <span>*</span></label><span class="validated"></span>
+        <input type="email" name="email" id="email" placeholder="man2Einstein@example.com" required oninput="checkForm()"
+          onblur="checkValEmail()">
+        <label for="email">E-mail <span>*</span></label><span class="hidden validated"></span><span class="hidden wrong">!</span>
 
       </div>
       <div class="field">
         <input type="email" name="confirmemail" id="confirmemail" placeholder="man2Einstein@example.com" required
-          oninput="checkForm()">
-        <label for="confirmemail">Bekræft e-mail<span>*</span></label><span class="validated"></span>
+          oninput="checkForm()" onblur="checkValConfirmEmail()">
+        <label for="confirmemail">Bekræft e-mail<span>*</span></label><span class="hidden validated"></span><span class="hidden wrong">!</span>
 
       </div>
 
