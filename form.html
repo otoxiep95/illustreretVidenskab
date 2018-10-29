@@ -89,6 +89,8 @@
       </div>
       <p>Felter markeret med * er obligatoriske</p>
     </div>
+  </form>
+  <form id="pay">
 
     <div class="payment-slide hidden">
 
@@ -97,7 +99,7 @@
         <div class="payment-option">
           <p>Visa / Dankort</p>
           <div></div>
-          <label class="container-pay"><input id="visa" type="radio" name="visa">
+          <label class="container-pay"><input id="visa" type="radio" name="payment">
             <span class="checkmark"></span>
           </label>
 
@@ -109,7 +111,7 @@
         <div class="payment-option">
           <p>Kreditkort</p>
           <div></div>
-          <label class="container-pay"><input id="credit" type="radio" name="credit">
+          <label class="container-pay"><input id="credit" type="radio" name="payment">
             <span class="checkmark"></span>
           </label>
 
@@ -117,7 +119,7 @@
         <div class="payment-option">
           <p>Mobilepay</p>
           <div></div>
-          <label class="container-pay"><input id="mobilepay" type="radio" name="mobilepay">
+          <label class="container-pay"><input id="mobilepay" type="radio" name="payment">
             <span class="checkmark"></span>
           </label>
 
@@ -125,7 +127,7 @@
         <div class="payment-option">
           <p>Girokort (+10kr)</p>
           <div></div>
-          <label class="container-pay"><input id="girokort" type="radio" name="girokort">
+          <label class="container-pay"><input id="girokort" type="radio" name="payment">
             <span class="checkmark"></span>
           </label>
 
@@ -150,10 +152,10 @@
       <div class="infos-nav selected">
         <h3>Kundeoplysninger</h3>
       </div>
-      <button class="payment-nav">
-        <h3>Betalingsmetode</h3>
-    </button>
-      <!-- <input class="hidden" type="submit" value="GO TO SECURE PAYMENT"> -->
+      <div class="payment-nav">
+        <h3 id="payh3">Betalingsmetode</h3>
+      </div>
+      <input class="hidden" type="submit" value="GO TO SECURE PAYMENT">
     </div>
 
 

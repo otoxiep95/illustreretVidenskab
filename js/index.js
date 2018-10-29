@@ -2,6 +2,7 @@ const infosButton = document.querySelector(".infos-nav");
 const paymentButton = document.querySelector(".payment-nav");
 const infosScreen = document.querySelector(".personal-info");
 const paymentScreen = document.querySelector(".payment-slide");
+const paySlide = document.querySelector("#payh3");
 
 infosButton.addEventListener("click", function() {
   infosScreen.classList.remove("hidden");
@@ -15,6 +16,8 @@ paymentButton.addEventListener("click", function() {
   paymentScreen.classList.remove("hidden");
   infosButton.classList.remove("selected");
   paymentButton.classList.add("selected");
+  body.style.backgroundColor = "lightblue";
+
 });
 
 const backArrow = document.querySelector(".arrow");
@@ -38,9 +41,9 @@ function checkForm() {
 
   if (validity) {
     body.style.backgroundColor = "lightgreen";
-    // paymentButton.disabled = false;
+    paySlide.style.color = "black";
   } else {
     body.style.backgroundColor = "lightblue";
-    // paymentButton.disabled = true;
+    paySlide.style.color = "lightgrey";
   }
 }

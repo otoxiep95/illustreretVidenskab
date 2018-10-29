@@ -232,7 +232,7 @@ input:focus::-webkit-input-placeholder {
 .payment-option {
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: 3fr 2fr .5fr;
 }
 
 .payment-option p,
@@ -263,14 +263,14 @@ input:focus::-webkit-input-placeholder {
 .container-pay {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  /* padding-left: 35px; */
+  /* margin-bottom: 12px; */
   cursor: pointer;
-  font-size: 16pt;
+  /* font-size: 10pt; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  /* user-select: none; */
 }
 
 /* Hide the browser's default radio button */
@@ -301,8 +301,8 @@ input:focus::-webkit-input-placeholder {
   position: absolute;
   content: "";
   border-radius: 100%;
-  height: 12.5px;
-  width: 12.5px;
+  height: 8.5px;
+  width: 7.5px;
   top: 3.5px;
   left: 4px;
   margin: auto;
@@ -375,4 +375,8 @@ input[type="submit"] {
 .arrow {
   font-size: 30px;
   margin: 0;
+}
+
+#payh3 {
+  color: lightgrey;
 }
