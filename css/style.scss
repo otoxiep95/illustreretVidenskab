@@ -20,6 +20,7 @@ body {
   font-family: $font;
   color: $blueColor;
 }
+
 main {
   margin: 5%;
 }
@@ -28,24 +29,30 @@ h1 {
   font-weight: 700;
   font-size: 18pt;
 }
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
 p {
   font-size: 16pt;
 }
+
 h3 {
   font-size: 14pt;
 }
+
 h2 {
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 16pt;
 }
-h1,
-h2,
-h3,
-.button {
-  text-transform: uppercase;
-}
+
 .button {
   text-align: center;
+}
+.buttonLink {
+  text-decoration: none;
 }
 .smallText {
   font-weight: 100;
@@ -54,26 +61,28 @@ h3,
   text-align: left;
   color: $blueColor;
 }
+
 .noMargin {
   margin: 0;
 }
+
 .fullWidth {
   width: 100%;
 }
+
 .plus {
   margin: auto;
   font-size: 14pt;
   height: 16pt;
   width: 16pt;
 }
+
 /****************STEP ONE******************/
 .checkoutTitle {
   margin: 5% 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  h1 {
-    margin: 0;
-  }
+
   h3 {
     align-self: end;
     text-transform: initial;
@@ -115,11 +124,13 @@ h3,
     color: $blueColor;
   }
 }
+
 .smallText,
 .button {
   margin: 5% 0;
   grid-column: span 2;
 }
+
 .iconGrid {
   margin: 0 20%;
   display: grid;
@@ -138,7 +149,7 @@ h3,
 .button {
   background-color: $greenColor;
   color: white;
-  font-size: 16pt;
+  font-size: 13pt;
   font-weight: 700;
   text-transform: uppercase;
   height: 6vh;
@@ -150,29 +161,38 @@ h3,
   position: -webkit-sticky;
   top: 0;
 }
+
 /*****************STEP TWO*********************/
 .stepTwo {
   margin: 10% 0;
 }
+
 .stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   margin: 10% 0;
+
   .bino {
     grid-column: 1/-1;
   }
+
   .icon {
     margin: auto;
     width: 70%;
+  }
+  h2 {
+    text-transform: initial;
   }
 
   ul {
     grid-column: 2;
   }
+
   .smallText {
     grid-column: 2;
   }
 }
+
 .borderLine {
   width: 50vw;
   height: 1vw;
@@ -180,9 +200,11 @@ h3,
   margin: 15% auto;
   border-bottom: 3pt solid $blueColor;
 }
+
 /****************STEP THREE******************/
 .stepThree > .stepThreeGrid {
   margin: 10% 0;
+
   .shopIcon {
     display: block;
     margin: 10% auto;
@@ -203,6 +225,7 @@ h3,
 .subTitles {
   display: inline;
 }
+
 .emphasis {
   font-weight: 700;
 }

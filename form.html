@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="selection-title">
+
+      <h3>
+        <p class="arrow">
+          &#8592;</p>
+        Du har valgt <span>2 nr.</span><br>
+                OG <span>Mitilux kikkert </span>FOR
+      </h3>
+      <h3><span class="line-through">1199kr.</span><br> *99kr.</h3>
+    </div>
+
+
+    <img src="img/logo-28.svg" alt="Illustreret Videnskap Logo" class="logo">
+    <!-- </nav> -->
+  </header>
+
+  <div class="purchase-info">
+
+    <!-- INFORMATION ABOUT THE PURCHASE AND STEPS -->
+
+  </div>
+
+  <form id="dataForm">
+
+
+    <div class="personal-info">
+
+      <div class="field">
+        <input type="text" name="firstname" id="firstname" placeholder="Albert" required oninput="checkForm()">
+        <span class="validated"></span> <label for="firstname"> Fornavn <span>*</span></label>
+
+      </div>
+      <div class="field">
+        <input type="text" name="lastname" id="lastname" placeholder="Einstein" required oninput="checkForm()">
+        <span class="validated"></span><label for="lastname">Efternavn <span>*</span></label>
+
+      </div>
+      <div class="field">
+        <input type="text" name="adress" id="adress" placeholder="112 Mercer Street" required oninput="checkForm()">
+        <span class="validated"></span><label for="adress">Adresse <span>*</span></label>
+
+      </div>
+
+      <div class="field">
+        <input type="text" name="city" id="city" placeholder="Princeton" required oninput="checkForm()">
+        <span class="validated"></span><label for="city">By <span>*</span></label>
+
+      </div>
+      <div class="field">
+        <input type="number" name="postnr" id="postnr" placeholder="10461" required oninput="checkForm()">
+        <span class="validated"></span><label for="postnr">Postnr <span>*</span></label>
+
+      </div>
+      <div class="field">
+        <input type="email" name="email" id="email" placeholder="man2Einstein@example.com" required oninput="checkForm()">
+        <span class="validated"></span><label for="email">E-mail <span>*</span></label>
+
+      </div>
+      <div class="field">
+        <input type="email" name="confirmemail" id="confirmemail" placeholder="man2Einstein@example.com"
+                    required oninput="checkForm()">
+        <span class="validated"></span><label for="confirmemail">Bekræft e-mail<span>*</span></label>
+
+      </div>
+
+      <div class="field">
+        <input type="number" name="phonenr" id="phonenr" placeholder="56070707">
+        <label for="phonenr">Telefonnr.</label>
+        <!-- <span class="validated"></span> -->
+
+      </div>
+      <p>Felter markeret med * er obligatoriske</p>
+    </div>
+  </form>
+  <form id="pay">
+
+    <div class="payment-slide hidden">
+
+      <div class="payment-options-box">
+
+        <div class="payment-option">
+          <p>Visa / Dankort</p>
+          <div></div>
+          <label class="container-pay"><input id="visa" type="radio" name="payment">
+            <span class="checkmark"></span>
+          </label>
+
+
+        </div>
+
+
+
+        <div class="payment-option">
+          <p>Kreditkort</p>
+          <div></div>
+          <label class="container-pay"><input id="credit" type="radio" name="payment">
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+        <div class="payment-option">
+          <p>Mobilepay</p>
+          <div></div>
+          <label class="container-pay"><input id="mobilepay" type="radio" name="payment">
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+        <div class="payment-option">
+          <p>Girokort (+10kr)</p>
+          <div></div>
+          <label class="container-pay"><input id="girokort" type="radio" name="payment">
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+
+      </div>
+      <div class="terms">
+        <ul class="terms-box">
+          <li>Efter tilbuddet fortsætter du i løbende abonnement og kan til enhver tid opsige det.</li>
+          <li>Abonnementet betales for 4 numre ad gangen, i alt 315,80 kr.. (78,95 kr. pr. nummer)</li>
+        </ul>
+        <div>
+          <input type="checkbox" id="terms-condition" name="terms-condition" value="terms-check" />
+          <label class="terms-lable"
+            for="scales">Jeg har læst og accepteret <span>abonnementsbetingelserne</span></label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <div class="infos-nav selected">
+        <h3>Kundeoplysninger</h3>
+      </div>
+      <div class="payment-nav">
+        <h3 id="payh3">Betalingsmetode</h3>
+      </div>
+      <input class="hidden" type="submit" value="GO TO SECURE PAYMENT">
+    </div>
+
+
+
+  </form>
+
+
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
