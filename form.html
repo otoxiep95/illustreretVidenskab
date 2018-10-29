@@ -3,15 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible"
-    content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet"
-    href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto"
-    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +18,7 @@
         <p class="arrow">
           &#8592;</p>
         Du har valgt <span>2 nr.</span><br>
-                OG <span>Mitilux kikkert </span>FOR
+        OG <span>Mitilux kikkert </span>FOR
       </h3>
       <h3><span class="line-through">1199kr.</span><br> *99kr.</h3>
     </div>
@@ -45,48 +41,49 @@
 
       <div class="field">
         <input type="text" name="firstname" id="firstname" placeholder="Albert" required oninput="checkForm()">
-        <span class="validated"></span> <label for="firstname"> Fornavn <span>*</span></label>
+        <label for="firstname"> Fornavn <span>*</span></label> <span class="validated"></span>
 
       </div>
       <div class="field">
         <input type="text" name="lastname" id="lastname" placeholder="Einstein" required oninput="checkForm()">
-        <span class="validated"></span><label for="lastname">Efternavn <span>*</span></label>
+        <label for="lastname">Efternavn <span>*</span></label> <span class="validated"></span>
+
+      </div>
+      <div class="field">
+        <input type="tel" name="phonenr" id="phonenr" pattern=".{8,8}" placeholder="56070707" oninput="checkForm()">
+        <label for="phonenr">Telefonnr.</label>
+        <span class="validated hidden"></span>
 
       </div>
       <div class="field">
         <input type="text" name="adress" id="adress" placeholder="112 Mercer Street" required oninput="checkForm()">
-        <span class="validated"></span><label for="adress">Adresse <span>*</span></label>
+        <label for="adress">Adresse <span>*</span></label><span class="validated"></span>
 
       </div>
+      <div class="field">
+        <input type="number" name="postnr" id="postnr" placeholder="10461" min="555" max="9999" required oninput="checkForm()">
+        <label for="postnr">Postnr <span>*</span></label><span class="validated"></span>
 
+      </div>
       <div class="field">
         <input type="text" name="city" id="city" placeholder="Princeton" required oninput="checkForm()">
-        <span class="validated"></span><label for="city">By <span>*</span></label>
+        <label for="city">By <span>*</span></label><span class="validated"></span>
 
       </div>
-      <div class="field">
-        <input type="number" name="postnr" id="postnr" placeholder="10461" required oninput="checkForm()">
-        <span class="validated"></span><label for="postnr">Postnr <span>*</span></label>
 
-      </div>
       <div class="field">
         <input type="email" name="email" id="email" placeholder="man2Einstein@example.com" required oninput="checkForm()">
-        <span class="validated"></span><label for="email">E-mail <span>*</span></label>
+        <label for="email">E-mail <span>*</span></label><span class="validated"></span>
 
       </div>
       <div class="field">
-        <input type="email" name="confirmemail" id="confirmemail" placeholder="man2Einstein@example.com"
-                    required oninput="checkForm()">
-        <span class="validated"></span><label for="confirmemail">Bekræft e-mail<span>*</span></label>
+        <input type="email" name="confirmemail" id="confirmemail" placeholder="man2Einstein@example.com" required
+          oninput="checkForm()">
+        <label for="confirmemail">Bekræft e-mail<span>*</span></label><span class="validated"></span>
 
       </div>
 
-      <div class="field">
-        <input type="number" name="phonenr" id="phonenr" placeholder="56070707">
-        <label for="phonenr">Telefonnr.</label>
-        <!-- <span class="validated"></span> -->
 
-      </div>
       <p>Felter markeret med * er obligatoriske</p>
     </div>
   </form>
@@ -141,8 +138,7 @@
         </ul>
         <div>
           <input type="checkbox" id="terms-condition" name="terms-condition" value="terms-check" />
-          <label class="terms-lable"
-            for="scales">Jeg har læst og accepteret <span>abonnementsbetingelserne</span></label>
+          <label class="terms-lable" for="scales">Jeg har læst og accepteret <span>abonnementsbetingelserne</span></label>
         </div>
 
       </div>
