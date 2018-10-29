@@ -34,10 +34,10 @@
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a grey background color
 .container:hover input~.checkmark {
-  /* background-color: #ccc; */
-}
+  background-color: #ccc; 
+} */
 
 .checkmark::before {
   display: block;
