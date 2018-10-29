@@ -29,11 +29,6 @@ h1 {
   font-weight: 700;
   font-size: 18pt;
 }
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-}
 
 p {
   font-size: 16pt;
@@ -56,7 +51,6 @@ h2 {
 }
 .smallText {
   font-weight: 100;
-  font-style: italic;
   font-size: 12pt;
   text-align: left;
   color: $blueColor;
@@ -71,6 +65,10 @@ h2 {
 }
 
 .plus {
+  background-color: $blueColor;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
   margin: auto;
   font-size: 14pt;
   height: 16pt;
@@ -80,13 +78,10 @@ h2 {
 /****************STEP ONE******************/
 .checkoutTitle {
   margin: 5% 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  div {
-    margin: 5% 0;
+  h1 {
+    text-align: center;
   }
   h3 {
-    align-self: end;
     text-transform: initial;
   }
 }
@@ -151,7 +146,7 @@ h2 {
 .button {
   background-color: $greenColor;
   color: white;
-  font-size: 13pt;
+  font-size: 16pt;
   font-weight: 700;
   text-transform: uppercase;
   height: 6vh;
