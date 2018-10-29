@@ -138,7 +138,7 @@ header {
   z-index: 10;
   width: 100vw;
   transition: all 0.6s;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: rgba(255, 255, 255, 0.9); }
   .menu ul {
     list-style-type: none; }
     .menu ul li {
@@ -213,7 +213,7 @@ h3,
   width: 100%; }
 
 .plus {
-  margin: auto 5%;
+  margin: auto;
   font-size: 14pt;
   height: 16pt;
   width: 16pt; }
@@ -231,11 +231,33 @@ h3,
 
 .stepOne {
   position: relative;
-  margin: 10% 0 0;
+  margin: 10% 0 0; }
+
+.container {
   display: grid;
-  grid-template-columns: 1fr 1fr; }
-  .stepOne label {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.5fr;
+  margin: 10% 5%; }
+  .container p {
+    margin: 0; }
+  .container .spar {
+    grid-column: 2;
+    text-align: right;
+    font-size: 14pt; }
+  .container .col {
+    font-size: 16pt;
+    font-weight: 700;
     grid-column: 1; }
+  .container .strikeThrough {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    font-weight: 100;
+    font-size: 12pt;
+    text-decoration-line: line-through; }
+  .container input[type="radio"] {
+    border-color: #1b1464;
+    color: #1b1464; }
 
 .smallText,
 .button {
@@ -243,24 +265,16 @@ h3,
   grid-column: span 2; }
 
 .iconGrid {
+  margin: 0 20%;
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-self: center; }
   .iconGrid .giftIcon {
-    padding: 5% 0; }
-
-.strikeThrough {
-  text-align: center;
-  font-weight: 100;
-  font-size: 12pt;
-  text-decoration-line: line-through; }
-
-label {
-  font-size: 16pt;
-  font-weight: 700; }
-  label input[type="radio"] {
-    border-color: #1b1464;
-    color: #1b1464; }
+    width: 80%;
+    padding: 10% 5%; }
+  .iconGrid .delIcon {
+    width: 80%;
+    align-self: end; }
 
 .button {
   background-color: #85ce6e;
@@ -308,6 +322,8 @@ label {
     display: block;
     margin: 10% auto;
     font-size: 16pt; }
+  .stepThree > .stepThreeGrid ul li {
+    margin: 5%; }
   .stepThree > .stepThreeGrid .desktopMobile {
     margin: 10% 30%;
     display: grid;

@@ -61,7 +61,7 @@ h3,
   width: 100%;
 }
 .plus {
-  margin: auto 5%;
+  margin: auto;
   font-size: 14pt;
   height: 16pt;
   width: 16pt;
@@ -82,10 +82,37 @@ h3,
 .stepOne {
   position: relative;
   margin: 10% 0 0;
+}
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  label {
+  grid-template-rows: 0.1fr 0.5fr;
+  margin: 10% 5%;
+  p {
+    margin: 0;
+  }
+  .spar {
+    grid-column: 2;
+    text-align: right;
+    font-size: 14pt;
+  }
+  .col {
+    font-size: 16pt;
+    font-weight: 700;
     grid-column: 1;
+  }
+  .strikeThrough {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    font-weight: 100;
+    font-size: 12pt;
+    text-decoration-line: line-through;
+  }
+
+  input[type="radio"] {
+    border-color: $blueColor;
+    color: $blueColor;
   }
 }
 .smallText,
@@ -94,27 +121,17 @@ h3,
   grid-column: span 2;
 }
 .iconGrid {
+  margin: 0 20%;
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-self: center;
-
   .giftIcon {
-    padding: 5% 0;
+    width: 80%;
+    padding: 10% 5%;
   }
-}
-
-.strikeThrough {
-  text-align: center;
-  font-weight: 100;
-  font-size: 12pt;
-  text-decoration-line: line-through;
-}
-label {
-  font-size: 16pt;
-  font-weight: 700;
-  input[type="radio"] {
-    border-color: $blueColor;
-    color: $blueColor;
+  .delIcon {
+    width: 80%;
+    align-self: end;
   }
 }
 
@@ -170,6 +187,9 @@ label {
     display: block;
     margin: 10% auto;
     font-size: 16pt;
+  }
+  ul li {
+    margin: 5%;
   }
 
   .desktopMobile {
