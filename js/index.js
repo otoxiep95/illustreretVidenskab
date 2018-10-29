@@ -33,6 +33,7 @@ backArrow.addEventListener("click", function() {
 const body = document.querySelector("body");
 
 let form = document.querySelector("#dataForm");
+let paymentForm = document.querySelector("#pay");
 
 function checkForm() {
   console.log("checkForm called");
@@ -45,5 +46,26 @@ function checkForm() {
   } else {
     body.style.backgroundColor = "lightblue";
     paySlide.style.color = "lightgrey";
+  }
+}
+
+const securePayment = document.querySelector("#secure");
+let progress = document.querySelector(".progress-bar");
+
+function checkPayment() {
+
+  // if (paymentForm.checked == true) {
+  //   console.log("checkPayment called");
+  // }
+  let paymentValid = paymentForm.checkValidity();
+  console.log("paymentValid", paymentValid);
+
+  if (paymentValid) {
+    securePayment.classList.remove("hidden");
+    progress.style.display = "block";
+    infosButton.classList.add("hidden");
+    paymentButton.classList.add("hidden");
+    body.style.backgroundColor = "lightgreen";
+
   }
 }
