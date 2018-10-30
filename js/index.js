@@ -96,8 +96,11 @@ function checkForm() {
     document.querySelector("#confirmemail").setCustomValidity("");
   }
 
-  if (validity && phoneField.value == null) {
-    //form is valid and phonefield number is empty //
+  if (
+    (validity && phoneField.value == null) ||
+    (validity && phoneValidity && phoneField.value == null)
+  ) {
+    //form is valid and phonefield number is empty and form is valid and phonefield is not empty and vali //
     phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
     body.style.backgroundColor = "lightgreen";
     paySlide.style.color = "black";
@@ -105,9 +108,10 @@ function checkForm() {
     //form is valid and phonefield is valid //
     body.style.backgroundColor = "lightgreen";
     paySlide.style.color = "black";
-  } else if (validity && phoneValidity && phoneField.value == null) {
-    //form is valid and phonefield is valid and empty//
-    phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
+    // } else if () {
+    //   //form is valid and phonefield is valid and empty//
+    //   phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
+    // }
   } else if (phoneValidity && phoneField.value) {
     //phonefield is valid and not empty//
     phoneField.nextElementSibling.nextElementSibling.classList.remove("hidden");
@@ -130,9 +134,9 @@ function checkPayment() {
 
   if (paymentValid) {
     securePayment.classList.remove("hidden");
-    progress.style.display = "block";
-    infosButton.classList.add("hidden");
-    paymentButton.classList.add("hidden");
+    // progress.style.display = "block";
+    // infosButton.classList.add("hidden");
+    // paymentButton.classList.add("hidden");
     body.style.backgroundColor = "lightgreen";
   }
 }
