@@ -247,7 +247,7 @@ li {
     left: 16vw;
     right: 3.5vw;
     top: 1vh;
-    height: 0.5px;
+    height: 1px;
     background-color: #1b1464; }
   .container input[type="radio"] {
     border-color: #1b1464;
