@@ -17,7 +17,6 @@ paymentButton.addEventListener("click", function() {
   infosButton.classList.remove("selected");
   paymentButton.classList.add("selected");
   body.style.backgroundColor = "lightblue";
-
 });
 
 const backArrow = document.querySelector(".arrow");
@@ -28,7 +27,7 @@ function GoBack() {
 
 backArrow.addEventListener("click", function() {
   GoBack();
-})
+});
 
 const body = document.querySelector("body");
 
@@ -53,7 +52,6 @@ const securePayment = document.querySelector("#secure");
 let progress = document.querySelector(".progress-bar");
 
 function checkPayment() {
-
   // if (paymentForm.checked == true) {
   //   console.log("checkPayment called");
   // }
@@ -66,6 +64,5 @@ function checkPayment() {
     infosButton.classList.add("hidden");
     paymentButton.classList.add("hidden");
     body.style.backgroundColor = "lightgreen";
-
   }
 }
