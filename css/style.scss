@@ -21,13 +21,10 @@ body {
   color: $blueColor;
 }
 
-main {
-  margin: 5%;
-}
-
 h1 {
   font-weight: 700;
   font-size: 18pt;
+  text-align: center;
 }
 
 p {
@@ -77,17 +74,14 @@ h2 {
 
 /****************STEP ONE******************/
 .checkoutTitle {
-  margin: 5% 0;
-  h1 {
-    text-align: center;
-  }
+  margin: 5%;
   h3 {
     text-transform: initial;
   }
 }
 .stepOne {
   position: relative;
-  margin: 10% 0 0;
+  margin: 10% 5%;
 }
 .container {
   display: grid;
@@ -169,7 +163,7 @@ h2 {
 .stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-  margin: 10% 0;
+  margin: 0 5%;
 
   .bino {
     grid-column: 1/-1;
@@ -222,7 +216,7 @@ h2 {
 }
 
 .subTitles {
-  display: inline;
+  text-align: center;
 }
 
 .emphasis {
