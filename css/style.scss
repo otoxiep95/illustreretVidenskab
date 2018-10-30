@@ -12,6 +12,12 @@ $font: "Roboto";
 * {
   box-sizing: border-box;
 }
+:root {
+  font-size: 62.5%;
+}
+main {
+  margin: 5% 0;
+}
 
 body {
   position: relative;
@@ -23,21 +29,23 @@ body {
 
 h1 {
   font-weight: 700;
-  font-size: 18pt;
+  font-size: 1.8rem;
   text-align: center;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+h3 {
+  text-align: center;
+  font-size: 1.4rem;
 }
 
 p {
-  font-size: 16pt;
+  font-size: 1.6rem;
 }
-
-h3 {
-  font-size: 14pt;
-}
-
-h2 {
-  font-weight: 700;
-  font-size: 16pt;
+li {
+  font-size: 1.2rem;
 }
 
 .button {
@@ -48,7 +56,7 @@ h2 {
 }
 .smallText {
   font-weight: 100;
-  font-size: 12pt;
+  font-size: 1.2rem;
   text-align: left;
   color: $blueColor;
 }
@@ -61,17 +69,6 @@ h2 {
   width: 100%;
 }
 
-.plus {
-  background-color: $blueColor;
-  border-radius: 100%;
-  color: white;
-  text-align: center;
-  margin: auto;
-  font-size: 14pt;
-  height: 16pt;
-  width: 16pt;
-}
-
 /****************STEP ONE******************/
 .checkoutTitle {
   margin: 5%;
@@ -80,34 +77,39 @@ h2 {
   }
 }
 .stepOne {
-  position: relative;
-  margin: 10% 5%;
+  margin: 5%;
+  .stepOneGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
+
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 0.5fr;
-  margin: 10% 5%;
+  position: relative;
   p {
     margin: 0;
   }
-  .spar {
-    grid-column: 2;
-    text-align: right;
-    font-size: 14pt;
-  }
   .col {
-    font-size: 16pt;
+    font-size: 1.6rem;
     font-weight: 700;
-    grid-column: 1;
   }
+
   .strikeThrough {
-    grid-column: 1;
-    grid-row: 1;
-    text-align: center;
+    margin-left: 3rem;
     font-weight: 100;
-    font-size: 12pt;
-    text-decoration-line: line-through;
+    font-size: 1.2rem;
+  }
+  .strikeThrough:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 16vw;
+    right: 3.5vw;
+    top: 1vh;
+    height: 0.5px;
+    // width: 10px;
+    background-color: $blueColor;
   }
 
   input[type="radio"] {
@@ -116,31 +118,37 @@ h2 {
   }
 }
 
-.smallText,
-.button {
+.smallText {
   margin: 5% 0;
   grid-column: span 2;
 }
-
+.radioGrid {
+  margin: auto;
+}
 .iconGrid {
-  margin: 0 20%;
+  margin: 5%;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, auto);
   align-self: center;
-  .giftIcon {
-    width: 80%;
-    padding: 10% 5%;
+  .check {
+    margin: auto;
+    grid-column: 1;
+    width: 60%;
   }
-  .delIcon {
-    width: 80%;
-    align-self: end;
+  .icon {
+    width: 50%;
+  }
+  .smallText {
+    grid-column: 2/-1;
   }
 }
 
 .button {
+  margin: 0;
   background-color: $greenColor;
   color: white;
-  font-size: 16pt;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   height: 6vh;
@@ -157,13 +165,12 @@ h2 {
 
 /*****************STEP TWO*********************/
 .stepTwo {
-  margin: 10% 0;
+  margin: 10% 5%;
 }
 
 .stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-  margin: 0 5%;
 
   .bino {
     grid-column: 1/-1;
@@ -191,18 +198,18 @@ h2 {
   width: 50vw;
   height: 1vw;
   display: block;
-  margin: 15% auto;
-  border-bottom: 3pt solid $blueColor;
+  margin: 10% auto;
+  border-bottom: 0.3rem solid $blueColor;
 }
 
 /****************STEP THREE******************/
 .stepThree > .stepThreeGrid {
-  margin: 10% 0;
+  margin: 10% 5%;
 
   .shopIcon {
     display: block;
     margin: 10% auto;
-    font-size: 16pt;
+    font-size: 1.6rem;
   }
   ul li {
     margin: 5%;
@@ -229,16 +236,16 @@ footer {
   background-color: #f3f3f3;
   padding: 5% 10%;
   h3 {
-    font-size: 14pt;
+    font-size: 1.4rem;
     text-align: left;
   }
   p {
-    font-size: 10pt;
+    font-size: 1rem;
   }
   a {
     display: block;
     color: gray;
-    font-size: 10pt;
+    font-size: 1rem;
   }
 }
 
