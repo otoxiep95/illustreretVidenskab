@@ -295,7 +295,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.1fr 0.5fr;
-  margin: 10% 5%;
+  /* margin: 10% 5%; */
 }
 
 .container p {
@@ -393,6 +393,8 @@ h2 {
 
 .stepTwoGrid ul {
   grid-column: 2;
+  margin: 0;
+  padding: 0;
 }
 
 .stepTwoGrid .smallText {
