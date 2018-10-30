@@ -301,6 +301,7 @@ h2 {
   .stepTwoGrid h2 {
     text-transform: initial; }
   .stepTwoGrid ul {
+    padding: 0;
     grid-column: 2; }
   .stepTwoGrid .smallText {
     grid-column: 2; }
