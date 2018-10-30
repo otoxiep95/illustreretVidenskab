@@ -205,6 +205,7 @@ li {
   text-decoration: none; }
 
 .smallText {
+  grid-column: span 2;
   font-weight: 100;
   font-size: 1.2rem;
   text-align: left;
@@ -253,10 +254,6 @@ li {
     border-color: #1b1464;
     color: #1b1464; }
 
-.smallText {
-  margin: 5% 0;
-  grid-column: span 2; }
-
 .radioGrid {
   margin: auto; }
 
@@ -273,6 +270,7 @@ li {
   .iconGrid .icon {
     width: 50%; }
   .iconGrid .smallText {
+    margin: 0;
     grid-column: 2/-1; }
 
 .button {
@@ -295,12 +293,15 @@ li {
 /*****************STEP TWO*********************/
 .stepTwo {
   margin: 10% 5%; }
+  .stepTwo h3 {
+    text-align: left; }
+
+.bino {
+  margin: 5% 0; }
 
 .stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr; }
-  .stepTwoGrid .bino {
-    grid-column: 1/-1; }
   .stepTwoGrid .icon {
     margin: auto;
     width: 70%; }

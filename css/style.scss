@@ -55,6 +55,7 @@ li {
   text-decoration: none;
 }
 .smallText {
+  grid-column: span 2;
   font-weight: 100;
   font-size: 1.2rem;
   text-align: left;
@@ -118,10 +119,6 @@ li {
   }
 }
 
-.smallText {
-  margin: 5% 0;
-  grid-column: span 2;
-}
 .radioGrid {
   margin: auto;
 }
@@ -140,6 +137,7 @@ li {
     width: 50%;
   }
   .smallText {
+    margin: 0;
     grid-column: 2/-1;
   }
 }
@@ -166,15 +164,17 @@ li {
 /*****************STEP TWO*********************/
 .stepTwo {
   margin: 10% 5%;
-}
 
+  h3 {
+    text-align: left;
+  }
+}
+.bino {
+  margin: 5% 0;
+}
 .stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-
-  .bino {
-    grid-column: 1/-1;
-  }
 
   .icon {
     margin: auto;
