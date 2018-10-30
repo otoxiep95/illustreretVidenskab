@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/otoxiep95/illustreretVidenskab.git"
   },
-  "author": "",
+  "author": "al",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/otoxiep95/illustreretVidenskab/issues"
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/otoxiep95/illustreretVidenskab#readme",
   "devDependencies": {
     "node-sass": "^4.9.4"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
