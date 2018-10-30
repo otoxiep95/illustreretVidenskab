@@ -38,15 +38,14 @@ function checkValFirstName() {
     document
       .querySelector("#firstname")
       .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  } else if (document.querySelector("#firstname").value === "") {
+    document
+      .querySelector("#firstname")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
   } else {
     document
       .querySelector("#firstname")
       .nextElementSibling.nextElementSibling.classList.add("hidden");
-    // document
-    //   .querySelector("#firstname")
-    //   .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
-    //     "hidden"
-    //   );
   }
 }
 
@@ -71,7 +70,11 @@ function checkValPhoneNr() {
     document
       .querySelector("#phonenr")
       .nextElementSibling.nextElementSibling.classList.remove("hidden");
-    document.querySelector("#confirmemail").setCustomValidity("");
+    document
+      .querySelector("#phonenr")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
   } else if (document.querySelector("#phonenr").value === "") {
     document
       .querySelector("#phonenr")
@@ -105,7 +108,19 @@ function checkValPostNr() {
       .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
         "hidden"
       );
-  } else {
+  } else if (
+    document.querySelector("#postnr").value === "" &&
+    !document.querySelector("#postnr").checkValidity()
+  ) {
+    document
+      .querySelector("#postnr")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
+  } else if (
+    document.querySelector("#postnr").value !== "" &&
+    !document.querySelector("#postnr").checkValidity()
+  ) {
     document
       .querySelector("#postnr")
       .nextElementSibling.nextElementSibling.classList.add("hidden");
@@ -129,54 +144,75 @@ function checkValCity() {
   }
 }
 function checkValEmail() {
-  if (document.querySelector("#email").checkValidity()) {
+  if (document.querySelector("#email").value === "") {
     document
       .querySelector("#email")
-      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
     document
       .querySelector("#email")
       .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
         "hidden"
       );
   } else {
-    document
-      .querySelector("#email")
-      .nextElementSibling.nextElementSibling.classList.add("hidden");
-    document
-      .querySelector("#email")
-      .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
-        "hidden"
-      );
+    if (document.querySelector("#email").checkValidity()) {
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+          "hidden"
+        );
+    } else {
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
+          "hidden"
+        );
+    }
   }
 }
 function checkValConfirmEmail() {
-  if (
-    document.querySelector("#confirmemail").value !=
-    document.querySelector("#email").value
-  ) {
-    //console.log(document.querySelector("#confirmemail + .validated"));
+  if (document.querySelector("#confirmemail").value === "") {
+    document
+      .querySelector("#confirmemail")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
     document
       .querySelector("#confirmemail")
       .nextElementSibling.nextElementSibling.classList.add("hidden");
-    document
-      .querySelector("#confirmemail")
-      .setCustomValidity("email Must be Matching.");
-    document
-      .querySelector("#confirmemail")
-      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
-        "hidden"
-      );
   } else {
-    // input is valid -- reset the error message
-    document
-      .querySelector("#confirmemail")
-      .nextElementSibling.nextElementSibling.classList.remove("hidden");
-    document
-      .querySelector("#confirmemail")
-      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
-        "hidden"
-      );
-    document.querySelector("#confirmemail").setCustomValidity("");
+    if (
+      document.querySelector("#confirmemail").value !=
+      document.querySelector("#email").value
+    ) {
+      //console.log(document.querySelector("#confirmemail + .validated"));
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+      document
+        .querySelector("#confirmemail")
+        .setCustomValidity("email Must be Matching.");
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
+          "hidden"
+        );
+    } else {
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+          "hidden"
+        );
+      document.querySelector("#confirmemail").setCustomValidity("");
+    }
   }
 }
 
