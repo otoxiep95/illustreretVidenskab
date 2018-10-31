@@ -166,6 +166,12 @@ header {
 * {
   box-sizing: border-box; }
 
+:root {
+  font-size: 62.5%; }
+
+main {
+  margin: 5% 0; }
+
 body {
   position: relative;
   margin: 0;
@@ -175,18 +181,22 @@ body {
 
 h1 {
   font-weight: 700;
-  font-size: 18pt;
+  font-size: 1.8rem;
   text-align: center; }
-
-p {
-  font-size: 16pt; }
-
-h3 {
-  font-size: 14pt; }
 
 h2 {
   font-weight: 700;
-  font-size: 16pt; }
+  font-size: 1.6rem; }
+
+h3 {
+  text-align: center;
+  font-size: 1.4rem; }
+
+p {
+  font-size: 1.6rem; }
+
+li {
+  font-size: 1.2rem; }
 
 .button {
   text-align: center; }
@@ -195,8 +205,9 @@ h2 {
   text-decoration: none; }
 
 .smallText {
+  grid-column: span 2;
   font-weight: 100;
-  font-size: 12pt;
+  font-size: 1.2rem;
   text-align: left;
   color: #1b1464; }
 
@@ -206,16 +217,6 @@ h2 {
 .fullWidth {
   width: 100%; }
 
-.plus {
-  background-color: #1b1464;
-  border-radius: 100%;
-  color: white;
-  text-align: center;
-  margin: auto;
-  font-size: 14pt;
-  height: 16pt;
-  width: 16pt; }
-
 /****************STEP ONE******************/
 .checkoutTitle {
   margin: 5%; }
@@ -223,56 +224,60 @@ h2 {
     text-transform: initial; }
 
 .stepOne {
-  position: relative;
-  margin: 10% 5%; }
+  margin: 5%; }
+  .stepOne .stepOneGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 0.5fr;
-  margin: 10% 5%; }
+  position: relative; }
   .container p {
     margin: 0; }
-  .container .spar {
-    grid-column: 2;
-    text-align: right;
-    font-size: 14pt; }
   .container .col {
-    font-size: 16pt;
-    font-weight: 700;
-    grid-column: 1; }
+    font-size: 1.6rem;
+    font-weight: 700; }
   .container .strikeThrough {
-    grid-column: 1;
-    grid-row: 1;
-    text-align: center;
+    margin-left: 3rem;
     font-weight: 100;
-    font-size: 12pt;
-    text-decoration-line: line-through; }
+    font-size: 1.2rem; }
+  .container .strikeThrough:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 16vw;
+    right: 3.5vw;
+    top: 1vh;
+    height: 1px;
+    background-color: #1b1464; }
   .container input[type="radio"] {
     border-color: #1b1464;
     color: #1b1464; }
 
-.smallText,
-.button {
-  margin: 5% 0;
-  grid-column: span 2; }
+.radioGrid {
+  margin: auto; }
 
 .iconGrid {
-  margin: 0 20%;
+  margin: 5%;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, auto);
   align-self: center; }
-  .iconGrid .giftIcon {
-    width: 80%;
-    padding: 10% 5%; }
-  .iconGrid .delIcon {
-    width: 80%;
-    align-self: end; }
+  .iconGrid .check {
+    margin: auto;
+    grid-column: 1;
+    width: 60%; }
+  .iconGrid .icon {
+    width: 50%; }
+  .iconGrid .smallText {
+    margin: 0;
+    grid-column: 2/-1; }
 
 .button {
+  margin: 0;
   background-color: #85ce6e;
   color: white;
-  font-size: 16pt;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   height: 6vh;
@@ -287,14 +292,16 @@ h2 {
 
 /*****************STEP TWO*********************/
 .stepTwo {
-  margin: 10% 0; }
+  margin: 10% 5%; }
+  .stepTwo h3 {
+    text-align: left; }
+
+.bino {
+  margin: 5% 0; }
 
 .stepTwoGrid {
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
-  margin: 0 5%; }
-  .stepTwoGrid .bino {
-    grid-column: 1/-1; }
+  grid-template-columns: 0.3fr 1fr; }
   .stepTwoGrid .icon {
     margin: auto;
     width: 70%; }
@@ -310,16 +317,16 @@ h2 {
   width: 50vw;
   height: 1vw;
   display: block;
-  margin: 15% auto;
-  border-bottom: 3pt solid #1b1464; }
+  margin: 10% auto;
+  border-bottom: 0.3rem solid #1b1464; }
 
 /****************STEP THREE******************/
 .stepThree > .stepThreeGrid {
-  margin: 10% 0; }
+  margin: 10% 5%; }
   .stepThree > .stepThreeGrid .shopIcon {
     display: block;
     margin: 10% auto;
-    font-size: 16pt; }
+    font-size: 1.6rem; }
   .stepThree > .stepThreeGrid ul li {
     margin: 5%; }
   .stepThree > .stepThreeGrid .desktopMobile {
@@ -339,14 +346,14 @@ footer {
   background-color: #f3f3f3;
   padding: 5% 10%; }
   footer h3 {
-    font-size: 14pt;
+    font-size: 1.4rem;
     text-align: left; }
   footer p {
-    font-size: 10pt; }
+    font-size: 1rem; }
   footer a {
     display: block;
     color: gray;
-    font-size: 10pt; }
+    font-size: 1rem; }
 
 .kundeGrid {
   display: grid;
