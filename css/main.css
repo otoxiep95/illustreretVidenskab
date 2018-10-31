@@ -65,6 +65,11 @@ header .selection-title h3:nth-child(2) {
   font-weight: 700;
   font-size: 16px;
 }
+header .selection-title h3:nth-child(3) {
+  position: absolute;
+  left: 79vw;
+  color: #85ce6e;
+}
 
 /**
 * Make the field a flex-container, reverse the order so label is on top.
@@ -151,7 +156,7 @@ input:focus {
 }
 
 /* CHECK MARK WHEN CORRECT*/
-input:valid~.validated::after {
+input:valid ~ .validated::after {
   position: absolute;
   bottom: 5px;
   width: 20px;
@@ -180,7 +185,7 @@ input:valid~.validated::after {
 * 2. Fix the cursor.
 * 3. Translate down and scale the label up to cover the placeholder.
 */
-input:placeholder-shown+label {
+input:placeholder-shown + label {
   /* [1] */
   max-width: 66.66%;
   white-space: nowrap;
@@ -215,8 +220,8 @@ input:focus::-webkit-input-placeholder {
 *     there's something in the input at all.
 * 2. ...and set the cursor to pointer.
 */
-.personal-info input:not(:placeholder-shown)+label,
-.personal-info input:focus+label {
+.personal-info input:not(:placeholder-shown) + label,
+.personal-info input:focus + label {
   transform: translate(0, 0) scale(1);
   /* [1] */
   cursor: pointer;
@@ -305,7 +310,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* On mouse-over, add a grey background color */
-.container-pay:hover input~.checkmark {
+.container-pay:hover input ~ .checkmark {
   /* background-color: #ccc; */
 }
 
@@ -322,7 +327,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* When the radio button is checked, add a blue background */
-.container-pay input:checked~.checkmark::before {
+.container-pay input:checked ~ .checkmark::before {
   background-color: #1b1464;
 }
 
@@ -334,7 +339,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container-pay input:checked~.checkmark:after {
+.container-pay input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -380,7 +385,6 @@ input[type="submit"] {
   /* padding: 0; */
   background-color: #85ce6e;
   color: white;
-
 }
 
 .hidden {
