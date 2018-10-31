@@ -36,64 +36,227 @@ let paymentForm = document.querySelector("#pay");
 
 let phoneField = document.querySelector("#phonenr");
 
+function checkValFirstName() {
+  if (document.querySelector("#firstname").checkValidity()) {
+    document
+      .querySelector("#firstname")
+      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  } else if (document.querySelector("#firstname").value === "") {
+    document
+      .querySelector("#firstname")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  } else {
+    document
+      .querySelector("#firstname")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  }
+}
+
+let phoneValidity = phoneField.checkValidity();
+
+console.log("check phone validity", phoneValidity);
+
+// if (phoneValidity) {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.remove("hidden");
+// } else if (phoneValidity && phoneField.value == null) {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// } else {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// }
+// if (
+//   document.querySelector("#phonenr").checkValidity() &&
+//   document.querySelector("#phonenr").value !== ""
+// ) {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.remove("hidden");
+//   document.querySelector("#phonenr").setCustomValidity("");
+// } else if (document.querySelector("#phonenr").value === "") {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// } else {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// }
+function checkValLastName() {
+  if (document.querySelector("#lastname").checkValidity()) {
+    document
+      .querySelector("#lastname")
+      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  } else {
+    document
+      .querySelector("#lastname")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  }
+}
+
+function checkValPhoneNr() {
+  console.log(document.querySelector("#phonenr").checkValidity());
+  if (
+    document.querySelector("#phonenr").checkValidity() &&
+    document.querySelector("#phonenr").value !== ""
+  ) {
+    document
+      .querySelector("#phonenr")
+      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+    document
+      .querySelector("#phonenr")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
+  } else if (document.querySelector("#phonenr").value === "") {
+    document
+      .querySelector("#phonenr")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  } else {
+    document
+      .querySelector("#phonenr")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  }
+}
+
+function checkValAdress() {
+  if (document.querySelector("#adress").checkValidity()) {
+    document
+      .querySelector("#adress")
+      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  } else {
+    document
+      .querySelector("#adress")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  }
+}
+
+function checkValPostNr() {
+  if (document.querySelector("#postnr").checkValidity()) {
+    document
+      .querySelector("#postnr")
+      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+    document
+      .querySelector("#postnr")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
+  } else if (
+    document.querySelector("#postnr").value === "" &&
+    !document.querySelector("#postnr").checkValidity()
+  ) {
+    document
+      .querySelector("#postnr")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
+  } else if (
+    document.querySelector("#postnr").value !== "" &&
+    !document.querySelector("#postnr").checkValidity()
+  ) {
+    document
+      .querySelector("#postnr")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+    document
+      .querySelector("#postnr")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
+        "hidden"
+      );
+  }
+}
+
+function checkValCity() {
+  if (document.querySelector("#city").checkValidity()) {
+    document
+      .querySelector("#city")
+      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  } else {
+    document
+      .querySelector("#city")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  }
+}
+function checkValEmail() {
+  if (document.querySelector("#email").value === "") {
+    document
+      .querySelector("#email")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+    document
+      .querySelector("#email")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
+  } else {
+    if (document.querySelector("#email").checkValidity()) {
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+          "hidden"
+        );
+    } else {
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+      document
+        .querySelector("#email")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
+          "hidden"
+        );
+    }
+  }
+}
+function checkValConfirmEmail() {
+  if (document.querySelector("#confirmemail").value === "") {
+    document
+      .querySelector("#confirmemail")
+      .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+        "hidden"
+      );
+    document
+      .querySelector("#confirmemail")
+      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  } else {
+    if (
+      document.querySelector("#confirmemail").value !=
+      document.querySelector("#email").value
+    ) {
+      //console.log(document.querySelector("#confirmemail + .validated"));
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+      document
+        .querySelector("#confirmemail")
+        .setCustomValidity("email Must be Matching.");
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
+          "hidden"
+        );
+    } else {
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+      document
+        .querySelector("#confirmemail")
+        .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
+          "hidden"
+        );
+      document.querySelector("#confirmemail").setCustomValidity("");
+    }
+  }
+}
+
 function checkForm() {
   console.log("checkForm called");
   let validity = form.checkValidity();
   console.log("Validity", validity);
-
-  let phoneValidity = phoneField.checkValidity();
-
-  console.log("check phone validity", phoneValidity);
-
-  // if (phoneValidity) {
-  //   document
-  //     .querySelector("#phonenr")
-  //     .nextElementSibling.nextElementSibling.classList.remove("hidden");
-  // } else if (phoneValidity && phoneField.value == null) {
-  //   document
-  //     .querySelector("#phonenr")
-  //     .nextElementSibling.nextElementSibling.classList.add("hidden");
-  // } else {
-  //   document
-  //     .querySelector("#phonenr")
-  //     .nextElementSibling.nextElementSibling.classList.add("hidden");
-  // }
-  // if (
-  //   document.querySelector("#phonenr").checkValidity() &&
-  //   document.querySelector("#phonenr").value !== ""
-  // ) {
-  //   document
-  //     .querySelector("#phonenr")
-  //     .nextElementSibling.nextElementSibling.classList.remove("hidden");
-  //   document.querySelector("#phonenr").setCustomValidity("");
-  // } else if (document.querySelector("#phonenr").value === "") {
-  //   document
-  //     .querySelector("#phonenr")
-  //     .nextElementSibling.nextElementSibling.classList.add("hidden");
-  // } else {
-  //   document
-  //     .querySelector("#phonenr")
-  //     .nextElementSibling.nextElementSibling.classList.add("hidden");
-  // }
-
-  if (
-    document.querySelector("#confirmemail").value !=
-    document.querySelector("#email").value
-  ) {
-    //console.log(document.querySelector("#confirmemail + .validated"));
-    document
-      .querySelector("#confirmemail")
-      .nextElementSibling.nextElementSibling.classList.add("hidden");
-    document
-      .querySelector("#confirmemail")
-      .setCustomValidity("email Must be Matching.");
-  } else {
-    // input is valid -- reset the error message
-    document
-      .querySelector("#confirmemail")
-      .nextElementSibling.nextElementSibling.classList.remove("hidden");
-    document.querySelector("#confirmemail").setCustomValidity("");
-  }
 
   if (validity) {
     //form is valid and phonefield number is empty and form is valid and phonefield is not empty and valid //

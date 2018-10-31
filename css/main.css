@@ -162,6 +162,16 @@ input:valid~.validated::after {
   text-align: center;
   content: "✓";
 }
+.wrong {
+  position: absolute;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+}
 
 /**
 * When the label follows an input matching :placeholder-shown...
