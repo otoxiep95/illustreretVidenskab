@@ -33,7 +33,7 @@ const body = document.querySelector("body");
 
 let form = document.querySelector("#dataForm");
 let paymentForm = document.querySelector("#pay");
-let phoneValidity = document.querySelector("#phonenr").checkValidity();
+
 let phoneField = document.querySelector("#phonenr");
 
 function checkForm() {
@@ -41,10 +41,9 @@ function checkForm() {
   let validity = form.checkValidity();
   console.log("Validity", validity);
 
-  console.log(
-    "check phone validity",
-    document.querySelector("#phonenr").checkValidity()
-  );
+  let phoneValidity = phoneField.checkValidity();
+
+  console.log("check phone validity", phoneValidity);
 
   // if (phoneValidity) {
   //   document
@@ -96,11 +95,8 @@ function checkForm() {
     document.querySelector("#confirmemail").setCustomValidity("");
   }
 
-  if (
-    (validity && phoneField.value == null) ||
-    (validity && phoneValidity && phoneField.value == null)
-  ) {
-    //form is valid and phonefield number is empty and form is valid and phonefield is not empty and vali //
+  if (validity) {
+    //form is valid and phonefield number is empty and form is valid and phonefield is not empty and valid //
     phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
     body.style.backgroundColor = "lightgreen";
     paySlide.style.color = "black";
