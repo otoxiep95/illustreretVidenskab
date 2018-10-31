@@ -16,7 +16,7 @@ paymentButton.addEventListener("click", function() {
   paymentScreen.classList.remove("hidden");
   infosButton.classList.remove("selected");
   paymentButton.classList.add("selected");
-  body.style.backgroundColor = "lightblue";
+  body.style.backgroundColor = "#0816611f";
 });
 
 const backArrow = document.querySelector(".arrow");
@@ -275,7 +275,7 @@ function checkForm() {
     //phonefield is valid and not empty//
     phoneField.nextElementSibling.nextElementSibling.classList.remove("hidden");
   } else {
-    body.style.backgroundColor = "lightblue";
+    body.style.backgroundColor = "#0816611f";
     paySlide.style.color = "lightgrey";
     phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
   }
