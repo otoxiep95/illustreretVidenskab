@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Roboto";
-  background: lightblue;
+  background: #0816611f;
 }
 
 header {
@@ -161,6 +161,16 @@ input:valid~.validated::after {
   border-radius: 50%;
   text-align: center;
   content: "✓";
+}
+.wrong {
+  position: absolute;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
 }
 
 /**
@@ -359,10 +369,15 @@ input:focus::-webkit-input-placeholder {
 }
 
 input[type="submit"] {
+  position: fixed;
+  z-index: 10;
   width: 100%;
-  height: 7vh;
-  /* margin: 2.5%; */
-  padding: 0;
+  height: 8vh;
+  bottom: 7vh;
+  /* margin: 2%; */
+  /* padding-bottom: 8%; */
+  /* padding: 1%; */
+  /* padding: 0; */
   background-color: #85ce6e;
   color: white;
 
