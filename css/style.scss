@@ -280,6 +280,15 @@ footer {
     color: gray;
     font-size: 1rem;
   }
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-gap: 2%;
+    padding: 5%;
+    .sikkerBetaling img {
+      width: 100%;
+    }
+  }
 }
 
 .kundeGrid {
