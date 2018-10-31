@@ -162,6 +162,7 @@ input:valid~.validated::after {
   text-align: center;
   content: "✓";
 }
+
 .wrong {
   position: absolute;
   bottom: 5px;
@@ -304,10 +305,7 @@ input:focus::-webkit-input-placeholder {
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
-.container-pay:hover input~.checkmark {
-  /* background-color: #ccc; */
-}
+
 
 .checkmark::before {
   display: block;
