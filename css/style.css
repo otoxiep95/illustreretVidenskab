@@ -321,22 +321,22 @@ li {
   border-bottom: 0.3rem solid #1b1464; }
 
 /****************STEP THREE******************/
-.stepThree > .stepThreeGrid {
+.stepThree {
   margin: 10% 5%; }
-  .stepThree > .stepThreeGrid .shopIcon {
+  .stepThree .shopIcon {
     display: block;
     margin: 10% auto;
     font-size: 1.6rem; }
-  .stepThree > .stepThreeGrid ul li {
+  .stepThree ul li {
     margin: 5%; }
-  .stepThree > .stepThreeGrid .desktopMobile {
+  .stepThree .desktopMobile {
     margin: 10% 30%;
     display: grid;
     grid-template-columns: repeat(3, auto);
     text-align: center; }
 
 .subTitles {
-  text-align: center; }
+  text-align: left; }
 
 .emphasis {
   font-weight: 700; }
