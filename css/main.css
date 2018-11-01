@@ -69,6 +69,28 @@ header .selection-title h3:nth-child(2) {
 /**
 * Make the field a flex-container, reverse the order so label is on top.
 */
+.warning-messages-postnr {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  font-size: 10px;
+  padding: 1% 2.5%;
+  bottom: 6vh;
+  color: red;
+  z-index: 2;
+}
+
+.warning-messages-confirmemail {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  font-size: 10px;
+  padding: 1% 0%;
+  bottom: 5.5vh;
+  color: red;
+  z-index: 2;
+}
+
 form {
   width: 100%;
 }
