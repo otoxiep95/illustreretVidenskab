@@ -78,12 +78,14 @@ li {
   }
 }
 .stepOne {
+  margin: 5%;
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5%;
+    margin: 5% 10%;
   }
-  margin: 5%;
+
   .stepOneGrid {
     @media (min-width: 1024px) {
       grid-column: 2;
@@ -185,7 +187,7 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5%;
-    margin: 5%;
+    margin: 5% 10%;
   }
 
   h3 {
@@ -239,7 +241,7 @@ li {
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 5%;
+    margin: 5% 10%;
     // grid-gap: 5%;
     img {
       grid-column: 2;

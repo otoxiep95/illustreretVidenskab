@@ -117,11 +117,17 @@ header {
   background-image: url("/img/menu_background.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
+  @media (min-width: 1024px) {
+    header {
+      height: 100px; } }
   header svg {
     margin: 5%;
     fill: white;
     height: 45px;
     width: 35px; }
+    @media (min-width: 1024px) {
+      header svg {
+        display: none; } }
     header svg rect {
       height: 5px;
       transition: all 0.6s; }
@@ -132,6 +138,11 @@ header {
   header .navLogo {
     width: 40%;
     margin: 5% 5% 3% 9%; }
+    @media (min-width: 1024px) {
+      header .navLogo {
+        width: 20%;
+        float: left;
+        margin: 2% 5% 5%; } }
 
 .menu {
   position: absolute;
@@ -229,7 +240,8 @@ li {
     .stepOne {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 5%; } }
+      grid-gap: 5%;
+      margin: 5% 10%; } }
   .stepOne .stepOneGrid {
     position: relative;
     display: grid;
@@ -314,7 +326,7 @@ li {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 5%;
-      margin: 5%; } }
+      margin: 5% 10%; } }
   .stepTwo h3 {
     text-align: left; }
 
@@ -357,7 +369,7 @@ li {
     .stepThree {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin: 5%; }
+      margin: 5% 10%; }
       .stepThree img {
         grid-column: 2;
         grid-row: 2; }
