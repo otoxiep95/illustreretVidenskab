@@ -117,11 +117,17 @@ header {
   background-image: url("/img/menu_background.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
+  @media (min-width: 1024px) {
+    header {
+      height: 100px; } }
   header svg {
     margin: 5%;
     fill: white;
     height: 45px;
     width: 35px; }
+    @media (min-width: 1024px) {
+      header svg {
+        display: none; } }
     header svg rect {
       height: 5px;
       transition: all 0.6s; }
@@ -132,6 +138,11 @@ header {
   header .navLogo {
     width: 40%;
     margin: 5% 5% 3% 9%; }
+    @media (min-width: 1024px) {
+      header .navLogo {
+        width: 20%;
+        float: left;
+        margin: 2% 5% 5%; } }
 
 .menu {
   position: absolute;
@@ -225,10 +236,22 @@ li {
 
 .stepOne {
   margin: 5%; }
+  @media (min-width: 1024px) {
+    .stepOne {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+      margin: 5% 10%; } }
   .stepOne .stepOneGrid {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr; }
+    @media (min-width: 1024px) {
+      .stepOne .stepOneGrid {
+        grid-column: 2;
+        grid-row: 1; } }
+    .stepOne .stepOneGrid h1 {
+      grid-column: 1/-1; }
 
 .container {
   position: relative; }
@@ -289,19 +312,38 @@ li {
   top: 0;
   left: 0;
   width: 100vw; }
+  @media (min-width: 1024px) {
+    .sticky {
+      position: relative;
+      width: 20vw;
+      left: 60vw; } }
 
 /*****************STEP TWO*********************/
 .stepTwo {
   margin: 10% 5%; }
+  @media (min-width: 1024px) {
+    .stepTwo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+      margin: 5% 10%; } }
   .stepTwo h3 {
     text-align: left; }
 
 .bino {
   margin: 5% 0; }
+  @media (min-width: 1024px) {
+    .bino {
+      grid-column: 2;
+      grid-row: 2;
+      margin: 0; } }
 
 .stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr; }
+  @media (min-width: 1024px) {
+    .stepTwoGrid {
+      grid-row: 2; } }
   .stepTwoGrid .icon {
     margin: auto;
     width: 70%; }
@@ -323,17 +365,19 @@ li {
 /****************STEP THREE******************/
 .stepThree {
   margin: 10% 5%; }
-  .stepThree .shopIcon {
-    display: block;
-    margin: 10% auto;
-    font-size: 1.6rem; }
+  @media (min-width: 1024px) {
+    .stepThree {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 5% 10%; }
+      .stepThree img {
+        grid-column: 2;
+        grid-row: 2; }
+      .stepThree ul {
+        grid-column: 1;
+        grid-row: 2; } }
   .stepThree ul li {
     margin: 5%; }
-  .stepThree .desktopMobile {
-    margin: 10% 30%;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    text-align: center; }
 
 .subTitles {
   text-align: left; }
@@ -354,6 +398,14 @@ footer {
     display: block;
     color: gray;
     font-size: 1rem; }
+  @media (min-width: 1024px) {
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 1fr;
+      grid-gap: 2%;
+      padding: 5%; }
+      footer .sikkerBetaling img {
+        width: 100%; } }
 
 .kundeGrid {
   display: grid;
