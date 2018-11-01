@@ -42,7 +42,7 @@
   height: 12.5px;
   width: 12.5px;
   top: 3.5px;
-  left: 4px;
+  left: 3.5px;
   margin: auto; }
 
 /* When the radio button is checked, add a blue background */
@@ -109,13 +109,6 @@ body {
   padding-top: 1em;
   text-align: center; }
 
-a {
-  color: white;
-  font-size: 14px;
-  letter-spacing: 0.125em;
-  text-decoration: none;
-  text-transform: uppercase; }
-
 .slider-panel img {
   width: 100%; }
 
@@ -124,11 +117,17 @@ header {
   background-image: url("/img/menu_background.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
+  @media (min-width: 1024px) {
+    header {
+      height: 100px; } }
   header svg {
-    margin: 5% 5% 0 5%;
+    margin: 5%;
     fill: white;
-    height: 50px;
-    width: 40px; }
+    height: 45px;
+    width: 35px; }
+    @media (min-width: 1024px) {
+      header svg {
+        display: none; } }
     header svg rect {
       height: 5px;
       transition: all 0.6s; }
@@ -139,13 +138,18 @@ header {
   header .navLogo {
     width: 40%;
     margin: 5% 5% 3% 9%; }
+    @media (min-width: 1024px) {
+      header .navLogo {
+        width: 20%;
+        float: left;
+        margin: 2% 5% 5%; } }
 
 .menu {
   position: absolute;
   z-index: 10;
   width: 100vw;
   transition: all 0.6s;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: rgba(255, 255, 255, 0.9); }
   .menu ul {
     list-style-type: none; }
     .menu ul li {
@@ -173,45 +177,48 @@ header {
 * {
   box-sizing: border-box; }
 
-body {
-  position: relative;
-  margin: 5%;
-  padding: 0;
-  font-family: "Roboto";
-  color: #1b1464; }
+:root {
+  font-size: 62.5%; }
 
 main {
   margin: 5% 0; }
 
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  color: #1b1464; }
+
 h1 {
   font-weight: 700;
-  font-size: 18pt; }
-
-p {
-  font-size: 16pt; }
-
-h3 {
-  font-size: 14pt; }
+  font-size: 1.8rem;
+  text-align: center; }
 
 h2 {
   font-weight: 700;
-  font-size: 14pt; }
+  font-size: 1.6rem; }
 
-h1,
-h2,
-h3,
-.button {
-  text-transform: uppercase; }
+h3 {
+  text-align: center;
+  font-size: 1.4rem; }
 
-h1,
-h3,
+p {
+  font-size: 1.6rem; }
+
+li {
+  font-size: 1.2rem; }
+
 .button {
   text-align: center; }
 
+.buttonLink {
+  text-decoration: none; }
+
 .smallText {
+  grid-column: span 2;
   font-weight: 100;
-  font-style: italic;
-  font-size: 12pt;
+  font-size: 1.2rem;
   text-align: left;
   color: #1b1464; }
 
@@ -221,50 +228,79 @@ h3,
 .fullWidth {
   width: 100%; }
 
-.plus {
-  margin: auto 5%;
-  font-size: 14pt;
-  height: 16pt;
-  width: 16pt; }
-
 /****************STEP ONE******************/
+.checkoutTitle {
+  margin: 5%; }
+  .checkoutTitle h3 {
+    text-transform: initial; }
+
 .stepOne {
-  position: relative;
-  margin: 10% 0 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-  .stepOne label {
-    grid-column: 1; }
+  margin: 5%; }
+  @media (min-width: 1024px) {
+    .stepOne {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+      margin: 5% 10%; } }
+  .stepOne .stepOneGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    @media (min-width: 1024px) {
+      .stepOne .stepOneGrid {
+        grid-column: 2;
+        grid-row: 1; } }
+    .stepOne .stepOneGrid h1 {
+      grid-column: 1/-1; }
 
-.smallText,
-.button {
-  margin: 5% 0;
-  grid-column: span 2; }
-
-.iconGrid {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  align-self: center; }
-  .iconGrid .giftIcon {
-    padding: 5% 0; }
-
-.strikeThrough {
-  text-align: center;
-  font-weight: 100;
-  font-size: 12pt;
-  text-decoration-line: line-through; }
-
-label {
-  font-size: 16pt;
-  font-weight: 700; }
-  label input[type="radio"] {
+.container {
+  position: relative; }
+  .container p {
+    margin: 0; }
+  .container .col {
+    font-size: 1.6rem;
+    font-weight: 700; }
+  .container .strikeThrough {
+    margin-left: 3rem;
+    font-weight: 100;
+    font-size: 1.2rem; }
+  .container .strikeThrough:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 16vw;
+    right: 3.5vw;
+    top: 1vh;
+    height: 1px;
+    background-color: #1b1464; }
+  .container input[type="radio"] {
     border-color: #1b1464;
     color: #1b1464; }
 
+.radioGrid {
+  margin: auto; }
+
+.iconGrid {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, auto);
+  align-self: center; }
+  .iconGrid .check {
+    margin: auto;
+    grid-column: 1;
+    width: 60%; }
+  .iconGrid .icon {
+    width: 50%; }
+  .iconGrid .smallText {
+    margin: 0;
+    grid-column: 2/-1; }
+
 .button {
+  margin: 0;
   background-color: #85ce6e;
   color: white;
-  font-size: 13pt;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   height: 6vh;
@@ -273,22 +309,48 @@ label {
 .sticky {
   position: sticky;
   position: -webkit-sticky;
-  top: 0; }
+  top: 0;
+  left: 0;
+  width: 100vw; }
+  @media (min-width: 1024px) {
+    .sticky {
+      position: relative;
+      width: 20vw;
+      left: 60vw; } }
 
 /*****************STEP TWO*********************/
 .stepTwo {
-  margin: 10% 0; }
+  margin: 10% 5%; }
+  @media (min-width: 1024px) {
+    .stepTwo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+      margin: 5% 10%; } }
+  .stepTwo h3 {
+    text-align: left; }
+
+.bino {
+  margin: 5% 0; }
+  @media (min-width: 1024px) {
+    .bino {
+      grid-column: 2;
+      grid-row: 2;
+      margin: 0; } }
 
 .stepTwoGrid {
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
-  margin: 10% 0; }
-  .stepTwoGrid .bino {
-    grid-column: 1/-1; }
+  grid-template-columns: 0.3fr 1fr; }
+  @media (min-width: 1024px) {
+    .stepTwoGrid {
+      grid-row: 2; } }
   .stepTwoGrid .icon {
     margin: auto;
     width: 70%; }
+  .stepTwoGrid h2 {
+    text-transform: initial; }
   .stepTwoGrid ul {
+    padding: 0;
     grid-column: 2; }
   .stepTwoGrid .smallText {
     grid-column: 2; }
@@ -297,24 +359,56 @@ label {
   width: 50vw;
   height: 1vw;
   display: block;
-  margin: 15% auto;
-  border-bottom: 3pt solid #1b1464; }
+  margin: 10% auto;
+  border-bottom: 0.3rem solid #1b1464; }
 
 /****************STEP THREE******************/
-.stepThree > .stepThreeGrid {
-  margin: 10% 0; }
-  .stepThree > .stepThreeGrid .shopIcon {
-    display: block;
-    margin: 10% auto;
-    font-size: 16pt; }
-  .stepThree > .stepThreeGrid .desktopMobile {
-    margin: 10% 30%;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    text-align: center; }
+.stepThree {
+  margin: 10% 5%; }
+  @media (min-width: 1024px) {
+    .stepThree {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 5% 10%; }
+      .stepThree img {
+        grid-column: 2;
+        grid-row: 2; }
+      .stepThree ul {
+        grid-column: 1;
+        grid-row: 2; } }
+  .stepThree ul li {
+    margin: 5%; }
 
 .subTitles {
-  display: inline; }
+  text-align: left; }
 
 .emphasis {
   font-weight: 700; }
+
+/***************FOOTER************************/
+footer {
+  background-color: #f3f3f3;
+  padding: 5% 10%; }
+  footer h3 {
+    font-size: 1.4rem;
+    text-align: left; }
+  footer p {
+    font-size: 1rem; }
+  footer a {
+    display: block;
+    color: gray;
+    font-size: 1rem; }
+  @media (min-width: 1024px) {
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 1fr;
+      grid-gap: 2%;
+      padding: 5%; }
+      footer .sikkerBetaling img {
+        width: 100%; } }
+
+.kundeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .kundeGrid p {
+    margin-top: 0; }

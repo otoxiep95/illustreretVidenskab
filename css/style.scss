@@ -12,54 +12,52 @@ $font: "Roboto";
 * {
   box-sizing: border-box;
 }
+:root {
+  font-size: 62.5%;
+}
+main {
+  margin: 5% 0;
+}
 
 body {
   position: relative;
-  margin: 5%;
+  margin: 0;
   padding: 0;
   font-family: $font;
   color: $blueColor;
 }
 
-main {
-  margin: 5% 0;
-}
-
 h1 {
   font-weight: 700;
-  font-size: 18pt;
+  font-size: 1.8rem;
+  text-align: center;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+h3 {
+  text-align: center;
+  font-size: 1.4rem;
 }
 
 p {
-  font-size: 16pt;
+  font-size: 1.6rem;
+}
+li {
+  font-size: 1.2rem;
 }
 
-h3 {
-  font-size: 14pt;
-}
-
-h2 {
-  font-weight: 700;
-  font-size: 14pt;
-}
-
-h1,
-h2,
-h3,
-.button {
-  text-transform: uppercase;
-}
-
-h1,
-h3,
 .button {
   text-align: center;
 }
-
+.buttonLink {
+  text-decoration: none;
+}
 .smallText {
+  grid-column: span 2;
   font-weight: 100;
-  font-style: italic;
-  font-size: 12pt;
+  font-size: 1.2rem;
   text-align: left;
   color: $blueColor;
 }
@@ -72,51 +70,62 @@ h3,
   width: 100%;
 }
 
-.plus {
-  margin: auto 5%;
-  font-size: 14pt;
-  height: 16pt;
-  width: 16pt;
-}
-
 /****************STEP ONE******************/
+.checkoutTitle {
+  margin: 5%;
+  h3 {
+    text-transform: initial;
+  }
+}
 .stepOne {
+  margin: 5%;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+    margin: 5% 10%;
+  }
+
+  .stepOneGrid {
+    @media (min-width: 1024px) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    h1 {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.container {
   position: relative;
-  margin: 10% 0 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  label {
-    grid-column: 1;
+  p {
+    margin: 0;
   }
-}
-
-.smallText,
-.button {
-  margin: 5% 0;
-  grid-column: span 2;
-}
-
-.iconGrid {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  align-self: center;
-
-  .giftIcon {
-    padding: 5% 0;
+  .col {
+    font-size: 1.6rem;
+    font-weight: 700;
   }
-}
 
-.strikeThrough {
-  text-align: center;
-  font-weight: 100;
-  font-size: 12pt;
-  text-decoration-line: line-through;
-}
-
-label {
-  font-size: 16pt;
-  font-weight: 700;
+  .strikeThrough {
+    margin-left: 3rem;
+    font-weight: 100;
+    font-size: 1.2rem;
+  }
+  .strikeThrough:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 16vw;
+    right: 3.5vw;
+    top: 1vh;
+    height: 1px;
+    // width: 10px;
+    background-color: $blueColor;
+  }
 
   input[type="radio"] {
     border-color: $blueColor;
@@ -124,10 +133,34 @@ label {
   }
 }
 
+.radioGrid {
+  margin: auto;
+}
+.iconGrid {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, auto);
+  align-self: center;
+  .check {
+    margin: auto;
+    grid-column: 1;
+    width: 60%;
+  }
+  .icon {
+    width: 50%;
+  }
+  .smallText {
+    margin: 0;
+    grid-column: 2/-1;
+  }
+}
+
 .button {
+  margin: 0;
   background-color: $greenColor;
   color: white;
-  font-size: 13pt;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   height: 6vh;
@@ -138,28 +171,54 @@ label {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  left: 0;
+  width: 100vw;
+  @media (min-width: 1024px) {
+    position: relative;
+    width: 20vw;
+    left: 60vw;
+  }
 }
 
 /*****************STEP TWO*********************/
 .stepTwo {
-  margin: 10% 0;
-}
+  margin: 10% 5%;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+    margin: 5% 10%;
+  }
 
+  h3 {
+    text-align: left;
+  }
+}
+.bino {
+  margin: 5% 0;
+  @media (min-width: 1024px) {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+}
 .stepTwoGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-  margin: 10% 0;
-
-  .bino {
-    grid-column: 1/-1;
+  @media (min-width: 1024px) {
+    grid-row: 2;
   }
 
   .icon {
     margin: auto;
     width: 70%;
   }
+  h2 {
+    text-transform: initial;
+  }
 
   ul {
+    padding: 0;
     grid-column: 2;
   }
 
@@ -172,32 +231,72 @@ label {
   width: 50vw;
   height: 1vw;
   display: block;
-  margin: 15% auto;
-  border-bottom: 3pt solid $blueColor;
+  margin: 10% auto;
+  border-bottom: 0.3rem solid $blueColor;
 }
 
 /****************STEP THREE******************/
-.stepThree > .stepThreeGrid {
-  margin: 10% 0;
-
-  .shopIcon {
-    display: block;
-    margin: 10% auto;
-    font-size: 16pt;
+.stepThree {
+  margin: 10% 5%;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5% 10%;
+    // grid-gap: 5%;
+    img {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    ul {
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
 
-  .desktopMobile {
-    margin: 10% 30%;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    text-align: center;
+  ul li {
+    margin: 5%;
   }
 }
 
 .subTitles {
-  display: inline;
+  text-align: left;
 }
 
 .emphasis {
   font-weight: 700;
+}
+
+/***************FOOTER************************/
+footer {
+  background-color: #f3f3f3;
+  padding: 5% 10%;
+  h3 {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  p {
+    font-size: 1rem;
+  }
+  a {
+    display: block;
+    color: gray;
+    font-size: 1rem;
+  }
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-gap: 2%;
+    padding: 5%;
+    .sikkerBetaling img {
+      width: 100%;
+    }
+  }
+}
+
+.kundeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  p {
+    margin-top: 0;
+  }
 }

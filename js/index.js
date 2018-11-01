@@ -4,6 +4,31 @@ const infosScreen = document.querySelector(".personal-info");
 const paymentScreen = document.querySelector(".payment-slide");
 const paySlide = document.querySelector("#payh3");
 
+let valueMag = sessionStorage.getItem("value");
+// let numberMag = sessionStorage.getItem("number");
+console.log("valueMag", valueMag);
+// console.log("number", number);
+
+
+let spar = document.getElementById("spar2");
+let price = document.getElementById("price");
+let numbersMag = document.getElementById("numbersMag");
+
+function insertData() {
+  if (valueMag == "6 nr. 199kr.") {
+    console.log("it's 6!");
+    spar.innerHTML = "1200" + "" + "kr." + "!";
+    price.innerHTML = "199" + "" + "kr.";
+    numbersMag.innerHTML = "6" + "" + "nr.";
+  } else {
+    spar.innerHTML = "987" + "" + "kr." + "!";
+    price.innerHTML = "99" + "" + "kr.";
+    numbersMag.innerHTML = "2" + "" + "nr.";
+  }
+}
+
+insertData();
+
 infosButton.addEventListener("click", function() {
   infosScreen.classList.remove("hidden");
   paymentScreen.classList.add("hidden");
@@ -16,7 +41,7 @@ paymentButton.addEventListener("click", function() {
   paymentScreen.classList.remove("hidden");
   infosButton.classList.remove("selected");
   paymentButton.classList.add("selected");
-  body.style.backgroundColor = "lightblue";
+  body.style.backgroundColor = "#0816611f";
 });
 
 const backArrow = document.querySelector(".arrow");
@@ -32,6 +57,9 @@ backArrow.addEventListener("click", function() {
 const body = document.querySelector("body");
 
 let form = document.querySelector("#dataForm");
+let paymentForm = document.querySelector("#pay");
+
+let phoneField = document.querySelector("#phonenr");
 
 function checkValFirstName() {
   if (document.querySelector("#firstname").value === "") {
@@ -49,6 +77,40 @@ function checkValFirstName() {
   }
 }
 
+let phoneValidity = phoneField.checkValidity();
+
+console.log("check phone validity", phoneValidity);
+
+// if (phoneValidity) {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.remove("hidden");
+// } else if (phoneValidity && phoneField.value == null) {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// } else {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// }
+// if (
+//   document.querySelector("#phonenr").checkValidity() &&
+//   document.querySelector("#phonenr").value !== ""
+// ) {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.remove("hidden");
+//   document.querySelector("#phonenr").setCustomValidity("");
+// } else if (document.querySelector("#phonenr").value === "") {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// } else {
+//   document
+//     .querySelector("#phonenr")
+//     .nextElementSibling.nextElementSibling.classList.add("hidden");
+// }
 function checkValLastName() {
   if (document.querySelector("#lastname").value === "") {
     document.querySelector("#lastname").nextElementSibling.style.color = "red";
@@ -160,6 +222,7 @@ function checkValCity() {
     }
   }
 }
+
 function checkValEmail() {
   if (document.querySelector("#email").value === "") {
     document
@@ -194,6 +257,7 @@ function checkValEmail() {
     }
   }
 }
+
 function checkValConfirmEmail() {
   if (document.querySelector("#confirmemail").value === "") {
     document
@@ -258,10 +322,55 @@ function checkForm() {
   console.log("Validity", validity);
 
   if (validity) {
+    //form is valid and phonefield number is empty and form is valid and phonefield is not empty and valid //
+    phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
     body.style.backgroundColor = "lightgreen";
     paySlide.style.color = "black";
+  } else if (validity && phoneValidity) {
+    //form is valid and phonefield is valid //
+    body.style.backgroundColor = "lightgreen";
+    paySlide.style.color = "black";
+    // } else if () {
+    //   //form is valid and phonefield is valid and empty//
+    //   phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
+    // }
+  } else if (phoneValidity && phoneField.value) {
+    //phonefield is valid and not empty//
+    phoneField.nextElementSibling.nextElementSibling.classList.remove("hidden");
   } else {
-    body.style.backgroundColor = "lightblue";
+    body.style.backgroundColor = "#0816611f";
     paySlide.style.color = "lightgrey";
+    phoneField.nextElementSibling.nextElementSibling.classList.add("hidden");
   }
 }
+
+const securePayment = document.querySelector("#secure");
+let progress = document.querySelector(".progress-bar");
+
+function checkPayment() {
+  // if (paymentForm.checked == true) {
+  //   console.log("checkPayment called");
+  // }
+  let paymentValid = paymentForm.checkValidity();
+  console.log("paymentValid", paymentValid);
+  // let termsForm = document.querySelector(".terms");
+  let terms = document.querySelector("#terms-condition");
+  // let termsValid = termsForm.checkValidity();
+  // console.log("termsValid", termsValid);
+  if (paymentValid && document.getElementById("terms-condition").checked) {
+    securePayment.classList.remove("hidden");
+
+    body.style.backgroundColor = "lightgreen";
+  } else {
+    securePayment.classList.add("hidden");
+    body.style.backgroundColor = "#0816611f";
+  }
+}
+
+// function validate() {
+//   if (document.getElementById("terms-condition").checked) {
+//     console.log("checked");
+//   } else {
+//     console.log("unchecked");
+//   }
+// }
