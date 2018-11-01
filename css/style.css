@@ -278,7 +278,9 @@ li {
     transform: rotate(8deg); }
     @media (min-width: 1024px) {
       .container .strikeThrough:before {
-        height: 1px; } }
+        height: 1px;
+        left: 5vw;
+        right: 0.5vw; } }
   .container input[type="radio"] {
     border-color: #1b1464;
     color: #1b1464; }

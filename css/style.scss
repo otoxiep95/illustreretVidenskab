@@ -129,6 +129,8 @@ li {
     @include transform(rotate(8deg));
     @media (min-width: 1024px) {
       height: 1px;
+      left: 5vw;
+      right: 0.5vw;
     }
   }
 
