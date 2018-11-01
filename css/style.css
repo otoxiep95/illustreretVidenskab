@@ -263,7 +263,7 @@ li {
   .container .strikeThrough {
     margin-left: 3rem;
     font-weight: 100;
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
   .container .strikeThrough:before {
     content: "";
     display: block;
@@ -271,8 +271,11 @@ li {
     left: 16vw;
     right: 3.5vw;
     top: 1vh;
-    height: 1px;
-    background-color: #1b1464; }
+    height: 0.5px;
+    background-color: #1b1464;
+    -webkit-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    transform: rotate(8deg); }
   .container input[type="radio"] {
     border-color: #1b1464;
     color: #1b1464; }
