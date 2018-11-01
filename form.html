@@ -3,11 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet"
+    href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -17,11 +21,14 @@
       <h3>
         <p class="arrow">
           &#8592;</p>
-        Du har valgt <span>2 nr.</span><br>
+        Du har valgt <span id="numbersMag">2 nr.</span><br>
         OG <span>Mitilux kikkert </span>FOR
       </h3>
-      <h3><span class="line-through">1199kr.</span><br> 99kr.</h3>
-      <h3 class="spar">Spar <span> 1046</span>kr.</h3>
+
+
+      <h3 id="price"> 99kr.</h3>
+      <h3 id="spar1">Spar <span id="spar2"> 1046kr.!</span></h3>
+
     </div>
 
 
@@ -105,68 +112,71 @@
             <p>Visa / Dankort</p>
           </label>
 
-          <div class="align"><img class="logos" src="img/dankort.png"><img class="logos" src="img/ff.png"></div>
+          <div class="align">
+            <div></div><img class="logos" src="img/dankort.png"><img class="logos" src="img/ff.png"></div>
 
 
 
-        </div>
+          </div>
 
 
 
-        <div class="payment-option">
+          <div class="payment-option">
 
 
-          <label class="container-pay"><input id="credit" type="radio" name="payment" oninput="checkPayment()">
-            <span class="checkmark"></span>
-            <p>Kreditkort</p>
-          </label>
-          <div class="align"><img class="logos" src="img/mastercard.jpg"><img class="logos" src="img/visa.jpg"><img
-              class="logos" src="img/maestro.png"></div>
-        </div>
-        <div class="payment-option">
+
+            <label class="container-pay"><input id="credit" type="radio" name="payment" oninput="checkPayment()">
+              <span class="checkmark"></span>
+              <p>Kreditkort</p>
+            </label>
+            <div class="align"><img class="logos" src="img/mastercard.png"><img class="logos" src="img/visa.jpg"><img class="logos" src="img/maestro.png"></div>
+            </div>
+            <div class="payment-option">
 
 
-          <label class="container-pay"><input id="mobilepay" type="radio" name="payment" oninput="checkPayment()">
-            <span class="checkmark"></span>
-            <p>Mobilepay</p>
-          </label>
-          <div class="align"><img class="logomob" src="img/mobilepay.png"></div>
-        </div>
-        <div class="payment-option">
+              <label class="container-pay"><input id="mobilepay" type="radio" name="payment" oninput="checkPayment()">
+                <span class="checkmark"></span>
+                <p>Mobilepay</p>
+              </label>
+              <div class="align">
+                <div></div>
+                <div></div><img class="logomob" src="img/mobilepay.png"></div>
+              </div>
+              <div class="payment-option">
 
 
-          <label class="container-pay"><input id="girokort" type="radio" name="payment" oninput="checkPayment()">
-            <span class="checkmark"></span>
-            <p>Girokort (+15kr)</p>
-          </label>
-          <div class="align"></div>
-        </div>
+                <label class="container-pay"><input id="girokort" type="radio" name="payment" oninput="checkPayment()">
+                  <span class="checkmark"></span>
+                  <p>Girokort (+15kr)</p>
+                </label>
+                <div class="align"></div>
+              </div>
 
-      </div>
-      <div class="terms">
-        <ul class="terms-box">
-          <li>Efter tilbuddet fortsætter du i løbende abonnement og kan til enhver tid opsige det.</li>
-          <li>Abonnementet betales for 4 numre ad gangen, i alt 315,80 kr.. (78,95 kr. pr. nummer)</li>
-        </ul>
-        <div>
-          <input type="checkbox" id="terms-condition" name="terms-condition" value="terms-check" />
-          <label class="terms-lable" for="scales">Jeg har læst og accepteret <span>abonnementsbetingelserne</span></label>
-        </div>
+            </div>
+            <div class="terms">
+              <ul class="terms-box">
+                <li>Efter tilbuddet fortsætter du i løbende abonnement og kan til enhver tid opsige det.</li>
+                <li>Abonnementet betales for 4 numre ad gangen, i alt 315,80 kr.. (78,95 kr. pr. nummer)</li>
+              </ul>
+              <div class="checkInput">
+                <input type="checkbox" id="terms-condition" name="terms-condition" onclick="checkPayment()">
+                <label class="terms-lable"
+                  for="scales">Jeg har læst og accepteret <span>abonnementsbetingelserne</span></label>
+              </div>
 
-      </div>
-    </div>
-    <input id="secure" class="hidden" type="submit" value="Gå til sikker betalling">
-    <div class="progress-bar">
-      <div class="infos-nav selected">
-        <h3>Kundeoplysninger</h3>
-      </div>
-      <div class="payment-nav">
-        <h3 id="payh3">Betalingsmetode</h3>
-      </div>
+            </div>
 
-    </div>
+          </div>
+          <input id="secure" class="hidden" type="submit" value="Gå til sikker betalling">
+          <div class="progress-bar">
+            <div class="infos-nav selected">
+              <h3>Kundeoplysninger</h3>
+            </div>
+            <div class="payment-nav">
+              <h3 id="payh3">Betalingsmetode</h3>
+            </div>
 
-
+          </div>
 
   </form>
 

@@ -4,6 +4,31 @@ const infosScreen = document.querySelector(".personal-info");
 const paymentScreen = document.querySelector(".payment-slide");
 const paySlide = document.querySelector("#payh3");
 
+let valueMag = sessionStorage.getItem("value");
+// let numberMag = sessionStorage.getItem("number");
+console.log("valueMag", valueMag);
+// console.log("number", number);
+
+
+let spar = document.getElementById("spar2");
+let price = document.getElementById("price");
+let numbersMag = document.getElementById("numbersMag");
+
+function insertData() {
+  if (valueMag == "6 nr. 199kr.") {
+    console.log("it's 6!");
+    spar.innerHTML = "1200" + "" + "kr." + "!";
+    price.innerHTML = "199" + "" + "kr.";
+    numbersMag.innerHTML = "6" + "" + "nr.";
+  } else {
+    spar.innerHTML = "987" + "" + "kr." + "!";
+    price.innerHTML = "99" + "" + "kr.";
+    numbersMag.innerHTML = "2" + "" + "nr.";
+  }
+}
+
+insertData();
+
 infosButton.addEventListener("click", function() {
   infosScreen.classList.remove("hidden");
   paymentScreen.classList.add("hidden");
@@ -180,6 +205,7 @@ function checkValCity() {
       .nextElementSibling.nextElementSibling.classList.add("hidden");
   }
 }
+
 function checkValEmail() {
   if (document.querySelector("#email").value === "") {
     document
@@ -212,6 +238,7 @@ function checkValEmail() {
     }
   }
 }
+
 function checkValConfirmEmail() {
   if (document.querySelector("#confirmemail").value === "") {
     document
@@ -290,12 +317,24 @@ function checkPayment() {
   // }
   let paymentValid = paymentForm.checkValidity();
   console.log("paymentValid", paymentValid);
-
-  if (paymentValid) {
+  // let termsForm = document.querySelector(".terms");
+  let terms = document.querySelector("#terms-condition");
+  // let termsValid = termsForm.checkValidity();
+  // console.log("termsValid", termsValid);
+  if (paymentValid && document.getElementById("terms-condition").checked) {
     securePayment.classList.remove("hidden");
-    // progress.style.display = "block";
-    // infosButton.classList.add("hidden");
-    // paymentButton.classList.add("hidden");
+
     body.style.backgroundColor = "lightgreen";
+  } else {
+    securePayment.classList.add("hidden");
+    body.style.backgroundColor = "#0816611f";
   }
 }
+
+// function validate() {
+//   if (document.getElementById("terms-condition").checked) {
+//     console.log("checked");
+//   } else {
+//     console.log("unchecked");
+//   }
+// }
