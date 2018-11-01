@@ -62,18 +62,18 @@ let paymentForm = document.querySelector("#pay");
 let phoneField = document.querySelector("#phonenr");
 
 function checkValFirstName() {
-  if (document.querySelector("#firstname").checkValidity()) {
-    document
-      .querySelector("#firstname")
-      .nextElementSibling.nextElementSibling.classList.remove("hidden");
-  } else if (document.querySelector("#firstname").value === "") {
-    document
-      .querySelector("#firstname")
-      .nextElementSibling.nextElementSibling.classList.add("hidden");
+  if (document.querySelector("#firstname").value === "") {
+    document.querySelector("#firstname").nextElementSibling.style.color = "red";
   } else {
-    document
-      .querySelector("#firstname")
-      .nextElementSibling.nextElementSibling.classList.add("hidden");
+    if (document.querySelector("#firstname").checkValidity()) {
+      document
+        .querySelector("#firstname")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+    } else {
+      document
+        .querySelector("#firstname")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+    }
   }
 }
 
@@ -112,19 +112,22 @@ console.log("check phone validity", phoneValidity);
 //     .nextElementSibling.nextElementSibling.classList.add("hidden");
 // }
 function checkValLastName() {
-  if (document.querySelector("#lastname").checkValidity()) {
-    document
-      .querySelector("#lastname")
-      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  if (document.querySelector("#lastname").value === "") {
+    document.querySelector("#lastname").nextElementSibling.style.color = "red";
   } else {
-    document
-      .querySelector("#lastname")
-      .nextElementSibling.nextElementSibling.classList.add("hidden");
+    if (document.querySelector("#lastname").checkValidity()) {
+      document
+        .querySelector("#lastname")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+    } else {
+      document
+        .querySelector("#lastname")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+    }
   }
 }
 
 function checkValPhoneNr() {
-  console.log(document.querySelector("#phonenr").checkValidity());
   if (
     document.querySelector("#phonenr").checkValidity() &&
     document.querySelector("#phonenr").value !== ""
@@ -149,14 +152,18 @@ function checkValPhoneNr() {
 }
 
 function checkValAdress() {
-  if (document.querySelector("#adress").checkValidity()) {
-    document
-      .querySelector("#adress")
-      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  if (document.querySelector("#adress").value === "") {
+    document.querySelector("#adress").nextElementSibling.style.color = "red";
   } else {
-    document
-      .querySelector("#adress")
-      .nextElementSibling.nextElementSibling.classList.add("hidden");
+    if (document.querySelector("#adress").checkValidity()) {
+      document
+        .querySelector("#adress")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+    } else {
+      document
+        .querySelector("#adress")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+    }
   }
 }
 
@@ -170,6 +177,7 @@ function checkValPostNr() {
       .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
         "hidden"
       );
+    document.querySelector(".warning-messages-postnr").classList.add("hidden");
   } else if (
     document.querySelector("#postnr").value === "" &&
     !document.querySelector("#postnr").checkValidity()
@@ -179,6 +187,8 @@ function checkValPostNr() {
       .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
         "hidden"
       );
+    document.querySelector("#postnr").nextElementSibling.style.color = "red";
+    document.querySelector(".warning-messages-postnr").classList.add("hidden");
   } else if (
     document.querySelector("#postnr").value !== "" &&
     !document.querySelector("#postnr").checkValidity()
@@ -191,18 +201,25 @@ function checkValPostNr() {
       .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
         "hidden"
       );
+    document
+      .querySelector(".warning-messages-postnr")
+      .classList.remove("hidden");
   }
 }
 
 function checkValCity() {
-  if (document.querySelector("#city").checkValidity()) {
-    document
-      .querySelector("#city")
-      .nextElementSibling.nextElementSibling.classList.remove("hidden");
+  if (document.querySelector("#city").value === "") {
+    document.querySelector("#city").nextElementSibling.style.color = "red";
   } else {
-    document
-      .querySelector("#city")
-      .nextElementSibling.nextElementSibling.classList.add("hidden");
+    if (document.querySelector("#city").checkValidity()) {
+      document
+        .querySelector("#city")
+        .nextElementSibling.nextElementSibling.classList.remove("hidden");
+    } else {
+      document
+        .querySelector("#city")
+        .nextElementSibling.nextElementSibling.classList.add("hidden");
+    }
   }
 }
 
@@ -216,6 +233,8 @@ function checkValEmail() {
       .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
         "hidden"
       );
+    console.log("make" + document.querySelector("#email").nextElementSibling);
+    document.querySelector("#email").nextElementSibling.style.color = "red";
   } else {
     if (document.querySelector("#email").checkValidity()) {
       document
@@ -249,6 +268,11 @@ function checkValConfirmEmail() {
     document
       .querySelector("#confirmemail")
       .nextElementSibling.nextElementSibling.classList.add("hidden");
+    document.querySelector("#confirmemail").nextElementSibling.style.color =
+      "red";
+    document
+      .querySelector(".warning-messages-confirmemail")
+      .classList.add("hidden");
   } else {
     if (
       document.querySelector("#confirmemail").value !=
@@ -266,6 +290,9 @@ function checkValConfirmEmail() {
         .nextElementSibling.nextElementSibling.nextElementSibling.classList.remove(
           "hidden"
         );
+      document
+        .querySelector(".warning-messages-confirmemail")
+        .classList.remove("hidden");
     } else {
       document
         .querySelector("#confirmemail")
@@ -275,9 +302,18 @@ function checkValConfirmEmail() {
         .nextElementSibling.nextElementSibling.nextElementSibling.classList.add(
           "hidden"
         );
+      document
+        .querySelector(".warning-messages-confirmemail")
+        .classList.add("hidden");
       document.querySelector("#confirmemail").setCustomValidity("");
     }
   }
+}
+
+function resetColor(input) {
+  let label = input.nextElementSibling;
+  console.log(label);
+  label.style.color = "#1b1464";
 }
 
 function checkForm() {
