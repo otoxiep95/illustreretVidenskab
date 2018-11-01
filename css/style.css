@@ -114,7 +114,7 @@ body {
 
 header {
   border: 3pt solid #1b1464;
-  background-image: url("/img/menu_background.jpg");
+  background-image: url("img/menu_background.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
   @media (min-width: 1024px) {
