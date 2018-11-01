@@ -83,17 +83,18 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5%;
-    margin: 5% 10%;
+    margin: 5% 10% 0;
   }
 
   .stepOneGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     @media (min-width: 1024px) {
       grid-column: 2;
       grid-row: 1;
     }
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     h1 {
       grid-column: 1/-1;
     }
@@ -177,6 +178,7 @@ li {
     position: relative;
     width: 20vw;
     left: 60vw;
+    padding: 1% 2%;
   }
 }
 
