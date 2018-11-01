@@ -5,7 +5,29 @@ const paymentScreen = document.querySelector(".payment-slide");
 const paySlide = document.querySelector("#payh3");
 
 let valueMag = sessionStorage.getItem("value");
+// let numberMag = sessionStorage.getItem("number");
 console.log("valueMag", valueMag);
+// console.log("number", number);
+
+
+let spar = document.getElementById("spar2");
+let price = document.getElementById("price");
+let numbersMag = document.getElementById("numbersMag");
+
+function insertData() {
+  if (valueMag == "6 nr. 199kr.") {
+    console.log("it's 6!");
+    spar.innerHTML = "1200" + "" + "kr." + "!";
+    price.innerHTML = "199" + "" + "kr.";
+    numbersMag.innerHTML = "6" + "" + "nr.";
+  } else {
+    spar.innerHTML = "987" + "" + "kr." + "!";
+    price.innerHTML = "99" + "" + "kr.";
+    numbersMag.innerHTML = "2" + "" + "nr.";
+  }
+}
+
+insertData();
 
 infosButton.addEventListener("click", function() {
   infosScreen.classList.remove("hidden");

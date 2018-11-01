@@ -21,8 +21,11 @@ bestilBtn.addEventListener("click", function() {
   for (let i = 0; i < radioBtns.length; i++) {
     if (radioBtns[i].checked) {
       let btnValue = radioBtns[i].value;
+      // let number = i;
       console.log("value", btnValue);
+      // console.log("number", number);
       sessionStorage.setItem("value", btnValue);
+      // sessionStorage.setItem("number", number);
       break;
     }
 
