@@ -367,211 +367,228 @@ li {
 
 @media (min-width: 1024px) {
   .container .strikeThrough:before {
-    height: 1px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 16vw;
+    right: 3.5vw;
+    top: 1vh;
+    height: 0.5px;
+    background-color: #1b1464;
+    -webkit-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    transform: rotate(8deg);
   }
-}
 
-.container input[type="radio"] {
-  border-color: #1b1464;
-  color: #1b1464;
-}
-
-.radioGrid {
-  margin: auto;
-}
-
-.iconGrid {
-  margin: 5%;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: repeat(4, auto);
-  align-self: center;
-}
-
-.iconGrid .check {
-  margin: auto;
-  grid-column: 1;
-  width: 60%;
-}
-
-.iconGrid .icon {
-  width: 50%;
-}
-
-.iconGrid .smallText {
-  margin: 0;
-  grid-column: 2/-1;
-}
-
-.button {
-  margin: 0;
-  background-color: #85ce6e;
-  color: white;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  height: 6vh;
-  padding: 2%;
-}
-
-.sticky {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  left: 0;
-  width: 100vw;
-}
-
-@media (min-width: 1024px) {
-  .sticky {
-    position: relative;
-    width: 20vw;
-    left: 60vw;
-    padding: 1% 2%;
+  @media (min-width: 1024px) {
+    .container .strikeThrough:before {
+      height: 1px;
+      left: 5vw;
+      right: 0.5vw;
+    }
   }
-}
 
-/*****************STEP TWO*********************/
-.stepTwo {
-  margin: 10% 5%;
-}
+  .container input[type="radio"] {
+    border-color: #1b1464;
+    color: #1b1464;
+  }
 
-@media (min-width: 1024px) {
-  .stepTwo {
+  .radioGrid {
+    margin: auto;
+  }
+
+  .iconGrid {
+    margin: 5%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5%;
-    margin: 5% 10%;
-  }
-}
-
-.stepTwo h3 {
-  text-align: left;
-}
-
-.bino {
-  margin: 5% 0;
-}
-
-@media (min-width: 1024px) {
-  .bino {
-    grid-column: 2;
-    grid-row: 2;
-    margin: 0;
-  }
-}
-
-.stepTwoGrid {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr;
-}
-
-@media (min-width: 1024px) {
-  .stepTwoGrid {
-    grid-row: 2;
-  }
-}
-
-.stepTwoGrid .icon {
-  margin: auto;
-  width: 70%;
-}
-
-.stepTwoGrid h2 {
-  text-transform: initial;
-}
-
-.stepTwoGrid ul {
-  padding: 0;
-  grid-column: 2;
-}
-
-.stepTwoGrid .smallText {
-  grid-column: 2;
-}
-
-.borderLine {
-  width: 50vw;
-  height: 1vw;
-  display: block;
-  margin: 10% auto;
-  border-bottom: 0.3rem solid #1b1464;
-}
-
-/****************STEP THREE******************/
-.stepThree {
-  margin: 10% 5%;
-}
-
-@media (min-width: 1024px) {
-  .stepThree {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 5% 10%;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(4, auto);
+    align-self: center;
   }
 
-  .stepThree img {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .stepThree ul {
+  .iconGrid .check {
+    margin: auto;
     grid-column: 1;
-    grid-row: 2;
+    width: 60%;
   }
-}
 
-.stepThree ul li {
-  margin: 5%;
-}
+  .iconGrid .icon {
+    width: 50%;
+  }
 
-.subTitles {
-  text-align: left;
-}
+  .iconGrid .smallText {
+    margin: 0;
+    grid-column: 2/-1;
+  }
 
-.emphasis {
-  font-weight: 700;
-}
+  .button {
+    margin: 0;
+    background-color: #85ce6e;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 6vh;
+    padding: 2%;
+  }
 
-/***************FOOTER************************/
-footer {
-  background-color: #f3f3f3;
-  padding: 5% 10%;
-}
+  .sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
 
-footer h3 {
-  font-size: 1.4rem;
-  text-align: left;
-}
+  @media (min-width: 1024px) {
+    .sticky {
+      position: relative;
+      width: 20vw;
+      left: 60vw;
+      padding: 1% 2%;
+    }
+  }
 
-footer p {
-  font-size: 1rem;
-}
+  /*****************STEP TWO*********************/
+  .stepTwo {
+    margin: 10% 5%;
+  }
 
-footer a {
-  display: block;
-  color: gray;
-  font-size: 1rem;
-}
+  @media (min-width: 1024px) {
+    .stepTwo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+      margin: 5% 10%;
+    }
+  }
 
-@media (min-width: 1024px) {
-  footer {
+  .stepTwo h3 {
+    text-align: left;
+  }
+
+  .bino {
+    margin: 5% 0;
+  }
+
+  @media (min-width: 1024px) {
+    .bino {
+      grid-column: 2;
+      grid-row: 2;
+      margin: 0;
+    }
+  }
+
+  .stepTwoGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
-    grid-gap: 2%;
-    padding: 5%;
+    grid-template-columns: 0.3fr 1fr;
   }
 
-  footer .sikkerBetaling img {
-    width: 100%;
+  @media (min-width: 1024px) {
+    .stepTwoGrid {
+      grid-row: 2;
+    }
   }
-}
 
-.kundeGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+  .stepTwoGrid .icon {
+    margin: auto;
+    width: 70%;
+  }
 
-.kundeGrid p {
-  margin-top: 0;
-}
+  .stepTwoGrid h2 {
+    text-transform: initial;
+  }
+
+  .stepTwoGrid ul {
+    padding: 0;
+    grid-column: 2;
+  }
+
+  .stepTwoGrid .smallText {
+    grid-column: 2;
+  }
+
+  .borderLine {
+    width: 50vw;
+    height: 1vw;
+    display: block;
+    margin: 10% auto;
+    border-bottom: 0.3rem solid #1b1464;
+  }
+
+  /****************STEP THREE******************/
+  .stepThree {
+    margin: 10% 5%;
+  }
+
+  @media (min-width: 1024px) {
+    .stepThree {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 5% 10%;
+    }
+
+    .stepThree img {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .stepThree ul {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  .stepThree ul li {
+    margin: 5%;
+  }
+
+  .subTitles {
+    text-align: left;
+  }
+
+  .emphasis {
+    font-weight: 700;
+  }
+
+  /***************FOOTER************************/
+  footer {
+    background-color: #f3f3f3;
+    padding: 5% 10%;
+  }
+
+  footer h3 {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  footer a {
+    display: block;
+    color: gray;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 1fr;
+      grid-gap: 2%;
+      padding: 5%;
+    }
+
+    footer .sikkerBetaling img {
+      width: 100%;
+    }
+  }
+
+  .kundeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kundeGrid p {
+    margin-top: 0;
+  }
