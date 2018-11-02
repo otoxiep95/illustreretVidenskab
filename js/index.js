@@ -9,7 +9,6 @@ let valueMag = sessionStorage.getItem("value");
 console.log("valueMag", valueMag);
 // console.log("number", number);
 
-
 let spar = document.getElementById("spar2");
 let price = document.getElementById("price");
 let numbersMag = document.getElementById("numbersMag");
@@ -19,11 +18,11 @@ function insertData() {
     console.log("it's 6!");
     spar.innerHTML = "1200" + "" + "kr." + "!";
     price.innerHTML = "199" + "" + "kr.";
-    numbersMag.innerHTML = "6" + "" + "nr.";
+    numbersMag.innerHTML = "6" + " " + "nr.";
   } else {
     spar.innerHTML = "987" + "" + "kr." + "!";
     price.innerHTML = "99" + "" + "kr.";
-    numbersMag.innerHTML = "2" + "" + "nr.";
+    numbersMag.innerHTML = "2" + " " + "nr.";
   }
 }
 

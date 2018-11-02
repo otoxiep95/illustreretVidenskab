@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  position: sticky;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -88,7 +88,7 @@ header .selection-title h3:nth-child(3) {
   height: auto;
   font-size: 10px;
   padding: 1% 2.5%;
-  bottom: 6vh;
+  bottom: 9vh;
   color: red;
   z-index: 2;
 }
@@ -99,7 +99,7 @@ header .selection-title h3:nth-child(3) {
   height: auto;
   font-size: 10px;
   padding: 1% 0%;
-  bottom: 5.5vh;
+  bottom: 7.5vh;
   color: red;
   z-index: 2;
 }
@@ -186,7 +186,7 @@ input:focus {
 }
 
 /* CHECK MARK WHEN CORRECT*/
-input:valid ~ .validated::after {
+input:valid~.validated::after {
   position: absolute;
   bottom: 5px;
   width: 20px;
@@ -216,7 +216,7 @@ input:valid ~ .validated::after {
 * 2. Fix the cursor.
 * 3. Translate down and scale the label up to cover the placeholder.
 */
-input:placeholder-shown + label {
+input:placeholder-shown+label {
   /* [1] */
   max-width: 66.66%;
   white-space: nowrap;
@@ -251,8 +251,8 @@ input:focus::-webkit-input-placeholder {
 *     there's something in the input at all.
 * 2. ...and set the cursor to pointer.
 */
-.personal-info input:not(:placeholder-shown) + label,
-.personal-info input:focus + label {
+.personal-info input:not(:placeholder-shown)+label,
+.personal-info input:focus+label {
   transform: translate(0, 0) scale(1);
   /* [1] */
   cursor: pointer;
@@ -353,7 +353,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* When the radio button is checked, add a blue background */
-.container-pay input:checked ~ .checkmark::before {
+.container-pay input:checked~.checkmark::before {
   background-color: #1b1464;
 }
 
@@ -365,7 +365,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container-pay input:checked ~ .checkmark:after {
+.container-pay input:checked~.checkmark:after {
   display: block;
 }
 
@@ -400,6 +400,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 input[type="submit"] {
+  -webkit-appearance: none;
   position: fixed;
   transition: all 3s ease 0s;
   z-index: 10;
